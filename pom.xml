@@ -42,6 +42,10 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
 https://oss.sonatype.org/content/repositories/vaadin-releases/
 </url>
 		</repository>
+		<repository>
+			<id>datanucleus</id>
+			<url>http://www.datanucleus.org/downloads/maven2/</url>
+		</repository>
 		<!-- for Jakson -->
 		<repository>
 			<id>codehaus</id>
