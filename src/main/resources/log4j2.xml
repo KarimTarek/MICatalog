@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%p|%d{dd MMM yyyy HH:mm:ss,SSS}|%C{1}: %L|%m (%t) %n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<logger name="org.springframework">
+			<level value="info" />
+		</logger>
+		<Root level="trace">
+			<AppenderRef ref="STDOUT" level="trace" />
+		</Root>
+	</Loggers>
+</Configuration>
