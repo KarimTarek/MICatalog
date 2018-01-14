@@ -18,6 +18,14 @@
 		<tomcat.password>test123</tomcat.password>
 		<tomcat.path>/MICatalog</tomcat.path>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>openshift-nexus</id>
+			<url>http://nexus-devops.preprod.openshift.vodafone.com.eg/repository/maven-public/</url>
+		</repository>
+	</repositories>
+	<!--
 	<repositories>
 		<repository>
 			<id>vaadin-addons</id>
@@ -46,7 +54,7 @@ https://oss.sonatype.org/content/repositories/vaadin-releases/
 			<id>datanucleus</id>
 			<url>http://www.datanucleus.org/downloads/maven2/</url>
 		</repository>
-		<!-- for Jakson -->
+		
 		<repository>
 			<id>codehaus</id>
 			<url>http://repository.codehaus.org/org/codehaus</url>
@@ -62,9 +70,10 @@ https://oss.sonatype.org/content/repositories/vaadin-releases/
 		<repository>
       <id>codelds</id>
       <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+	 
     </repository>
-
 	</repositories>
+	 -->
 	<pluginRepositories>
 		<pluginRepository>
 			<id>vaadin-snapshots</id>
