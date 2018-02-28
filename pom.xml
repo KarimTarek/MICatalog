@@ -22,7 +22,7 @@
 	<repositories>
 		<repository>
 			<id>openshift-nexus</id>
-			<url>http://nexus-devops.preprod.openshift.vodafone.com.eg/repository/maven-public/</url>
+			<url>http://nexus.devops.preprod.openshift.vodafone.com.eg/repository/maven-public/</url>
 		</repository>
 	</repositories>
 	<!--
