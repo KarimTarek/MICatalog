@@ -3,26 +3,29 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eg.com.vodafone.mi</groupId>
 	<artifactId>MICatalog</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MICatalog Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
 
 	<properties>
 		<slf4j.version>1.7.5</slf4j.version>
 		<jdk.version>1.8</jdk.version>
 		<vaadin.version>8.3.1</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-		<!--
-	<repositories>
-		<repository>
-			<id>openshift-nexus</id>
-			<url>http://nexus.devops.preprod.openshift.vodafone.com.eg/repository/maven-public/</url>
-		</repository>
-	</repositories>
-	 -->
-	 
+	<!-- <repositories> <repository> <id>openshift-nexus</id> <url>http://nexus.devops.preprod.openshift.vodafone.com.eg/repository/maven-public/</url> 
+		</repository> </repositories> -->
+
 	<repositories>
 		<repository>
 			<id>vaadin-addons</id>
@@ -51,7 +54,7 @@ https://oss.sonatype.org/content/repositories/vaadin-releases/
 			<id>datanucleus</id>
 			<url>http://www.datanucleus.org/downloads/maven2/</url>
 		</repository>
-		
+
 		<repository>
 			<id>codehaus</id>
 			<url>http://repository.codehaus.org/org/codehaus</url>
@@ -65,10 +68,10 @@ https://oss.sonatype.org/content/repositories/vaadin-releases/
 			<url>http://www.cameliatk.jp/maven2/repository/thirdparty</url>
 		</repository>
 		<repository>
-      <id>codelds</id>
-      <url>https://code.lds.org/nexus/content/groups/main-repo</url>
-	 
-    </repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+
+		</repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -87,38 +90,38 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
 	</pluginRepositories>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<!-- Vaadin dependencies -->
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-compatibility-server</artifactId>
-			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-compatibility-client-compiled</artifactId>
-			<version>${vaadin.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client-compiler</artifactId>
-			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-compatibility-client</artifactId>
-			<version>${vaadin.version}</version>
 			<!-- <scope>provided</scope> -->
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-compatibility-themes</artifactId>
-			<version>${vaadin.version}</version>
 		</dependency>
-<dependency>
-   <groupId>org.tepi.filtertable</groupId>
-   <artifactId>filteringtable</artifactId>
-   <version>1.0.1.v8</version>
-</dependency>
+		<dependency>
+			<groupId>org.tepi.filtertable</groupId>
+			<artifactId>filteringtable</artifactId>
+			<version>1.0.1.v8</version>
+		</dependency>
 		<dependency>
 			<groupId>org.vaadin.addons</groupId>
 			<artifactId>wizards-for-vaadin</artifactId>
@@ -127,69 +130,14 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-push</artifactId>
-			<version>${vaadin.version}</version>
-		</dependency>
-		<!-- jetty dependencies -->
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-continuation</artifactId>
-			<version>9.0.7.v20131107</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty.websocket</groupId>
-			<artifactId>websocket-api</artifactId>
-			<version>9.0.7.v20131107</version>
 		</dependency>
 		<!-- /Vaadin dependencies -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
 		</dependency>
-		<!-- logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>2.0-rc1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jul-to-slf4j</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.0-rc1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.0-rc1</version>
-		</dependency>
-		<!-- /logging -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
@@ -198,7 +146,6 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
 		<dependency>
 			<groupId>commons-pool</groupId>
 			<artifactId>commons-pool</artifactId>
-			<version>20030825.183949</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-collections</groupId>
@@ -211,7 +158,7 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
 			<version>16.0.1</version>
 		</dependency>
 	</dependencies>
-		<dependencyManagement>
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.vaadin</groupId>
@@ -226,98 +173,37 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
 		<finalName>MICatalog</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-					<fork>true</fork>
-      <meminitial>1024m</meminitial>
-      <maxmem>2024m</maxmem>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.0.7.v20131107</version>
-			</plugin>
-			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
-				<version>${vaadin.plugin.version}</version>
 				<configuration>
-					<extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
-					<runTarget>clean</runTarget>
-					<!-- We are doing "inplace" but into subdir VAADIN/widgetsets. This 
-						way compatible with Vaadin eclipse plugin. -->
-					<webappDirectory>${basedir}/src/main/webapp/VAADIN/widgetsets</webappDirectory>
-					<hostedWebapp>${basedir}/src/main/webapp/VAADIN/widgetsets</hostedWebapp>
+					<extraJvmArgs>-Xmx2G -Xss1024k</extraJvmArgs>
+					<webappDirectory>
+						${basedir}/src/main/resources/VAADIN/widgetsets
+					</webappDirectory>
+					<warSourceDirectory>${basedir}/src/main/resources</warSourceDirectory>
+					<persistentunitcachedir>${project.build.directory}
+					</persistentunitcachedir>
+					<deploy>${project.build.directory}/gwt-deploy</deploy>
+					<compileReport>false</compileReport>
 					<noServer>true</noServer>
-					<!-- Remove draftCompile when project is ready -->
 					<draftCompile>false</draftCompile>
-					<compileReport>true</compileReport>
-					<style>OBF</style>
+					<style>DETAILED</style>
 					<strict>true</strict>
-					<!-- runTarget>http://localhost:8080/</runTarget -->
+					<runTarget>http://localhost:8080/</runTarget>
 				</configuration>
 				<executions>
 					<execution>
-						<configuration>
-							<!-- if you don't specify any modules, the plugin will find them <modules> 
-								<module>com.vaadin.demo.mobilemail.gwt.ColorPickerWidgetSet</module> </modules> -->
-						</configuration>
 						<goals>
 							<goal>resources</goal>
+							<goal>update-theme</goal>
 							<goal>update-widgetset</goal>
+							<goal>compile-theme</goal>
 							<goal>compile</goal>
 						</goals>
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <outputDirectory>target</outputDirectory>
-              		  <warName>ROOT</warName>
-                </configuration>
-            </plugin>
-
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!-- This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>com.vaadin</groupId>
-										<artifactId>vaadin-maven-plugin</artifactId>
-										<versionRange>[7.0.2,)</versionRange>
-										<goals>
-											<goal>resources</goal>
-											<goal>update-widgetset</goal>
-											<goal>compile</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+
 	</build>
 </project>

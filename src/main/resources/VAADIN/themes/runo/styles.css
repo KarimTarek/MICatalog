@@ -6,8 +6,30 @@
 	overflow: hidden;
 }
 
+.v-radiobutton {
+	-webkit-user-select: none;
+}
+
+@-webkit-keyframes v-notification-animate-out {
+		100% {
+		opacity: 0;
+	}
+	}
+
+@-moz-keyframes v-notification-animate-out {
+		100% {
+		opacity: 0;
+	}
+	}
+
+@keyframes v-notification-animate-out {
+		100% {
+		opacity: 0;
+	}
+	}
+
 .v-vaadin-version:after {
-	content: "7.1.11";
+	content: "8.3.1";
 }
 
 .v-generated-body {
@@ -22,298 +44,38 @@
 	overflow: hidden;
 }
 
-.v-debug-console {
-	background: #fff;
-	opacity: 0.9;
-	border: 1px solid #000;
-	font-family: sans-serif;
+@font-face {
+	font-family: FontAwesome;
+	src: url(../base/fonts/fontawesome-webfont.eot);
+	src: url(../base/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(../base/fonts/fontawesome-webfont.woff) format("woff"), url(../base/fonts/fontawesome-webfont.ttf) format("truetype"), url(../base/fonts/fontawesome-webfont.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 
-.v-debug-console-caption {
-	background: #000;
-	border-bottom: 1px solid grey;
-	color: white;
-	font-weight: bold;
-}
-
-.v-debug-console-content {
-	font-size: x-small;
-	overflow: auto;
-	white-space: pre;
-}
-
-.v-debug-console-content input {
-	font-size: xx-small;
-}
-
-.v-app .invalidlayout,.v-app .invalidlayout * {
-	background: #f99 !important;
+.FontAwesome {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
 }
 
 @font-face {
-	font-family: "vdebugfont";
-	src: url(../base/debug/fonts/font.eot);
-	src: url(../base/debug/fonts/font.eot?#iefix)
-		format("embedded-opentype"), url(../base/debug/fonts/font.woff)
-		format("woff"), url(../base/debug/fonts/font.ttf) format("truetype"),
-		url(../base/debug/fonts/font.svg#fontawesome) format("svg");
+	font-family: ThemeIcons;
+	src: url(../base/fonts/themeicons-webfont.eot);
+	src: url(../base/fonts/themeicons-webfont.eot?#iefix) format("embedded-opentype"), url(../base/fonts/themeicons-webfont.woff) format("woff"), url(../base/fonts/themeicons-webfont.ttf) format("truetype"), url(../base/fonts/themeicons-webfont.svg) format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
-.v-debugwindow [data-icon]:before,.v-debugwindow-menu [data-icon]:before
-	{
-	font-family: "vdebugfont";
-	content: attr(data-icon);
-	speak: none;
+.ThemeIcons {
+	font-family: ThemeIcons;
+	font-style: normal;
 	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	font-style: normal;
-	vertical-align: text-bottom;
-}
-
-.v-debugwindow {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-moz-opacity: 0.8;
-	-webkit-opacity: 0.8;
-	opacity: 0.8;
-	color: #666;
-	font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;
-	font-size: 13px;
-}
-
-.v-debugwindow .v-debugwindow-handle {
-	position: absolute;
-	bottom: 0;
-	background-color: #fff;
-	-moz-opacity: 0;
-	-webkit-opacity: 0;
-	opacity: 0;
-	z-index: 1000;
-}
-
-.v-debugwindow .v-debugwindow-handle-sw {
-	width: 7px;
-	height: 7px;
-}
-
-.v-debugwindow .v-debugwindow-handle-se {
-	right: 0;
-	width: 14px;
-	height: 14px;
-}
-
-.v-debugwindow:hover {
-	-moz-opacity: 1;
-	-webkit-opacity: 1;
-	opacity: 1;
-}
-
-.v-debugwindow * {
-	font-size: inherit !important;
-}
-
-.v-debugwindow-size0,.v-debugwindow-menu .v-debugwindow-button-size0 {
-	font-size: 10px;
-}
-
-.v-debugwindow-size1,.v-debugwindow-menu .v-debugwindow-button-size1 {
-	font-size: 13px;
-}
-
-.v-debugwindow-size2,.v-debugwindow-menu .v-debugwindow-button-size2 {
-	font-size: 16px;
-}
-
-.v-debugwindow-head {
-	text-align: right;
-	background-color: transparent;
-}
-
-.v-debugwindow-tabs {
+	-moz-osx-font-smoothing: grayscale;
 	display: inline-block;
-	background-color: #fff;
-}
-
-.v-debugwindow-tab,.v-debugwindow-controls>* {
-	width: 2em;
-	border: none;
-	margin: 0;
-	line-height: 1.5em;
-	background-color: #fff;
-	color: #666;
-}
-
-.v-debugwindow-tab {
-	position: relative;
-	top: 1px;
-	border-width: 1px 0 1px 1px;
-	border-style: solid;
-	border-color: #666;
-	border-radius: 2px 2px 0 0;
-}
-
-.v-debugwindow-tab-selected {
-	color: #666;
-	background-color: #fff;
-	border-bottom: 1px solid #fff;
-}
-
-.v-debugwindow-controls {
-	position: relative;
-	top: 1px;
-	display: inline-block;
-	background-color: #fff;
-	border: 1px solid #666;
-	border-radius: 2px 2px 0 0;
-}
-
-.v-debugwindow-section-head {
-	text-align: left;
-	background-color: #fff;
-	border: 1px solid #666;
-	border-bottom: 1px solid #999;
-	box-shadow: 0px 0px 7px 0 rgba(55, 55, 55, 0.6);
-	min-height: 1.5em;
-	line-height: 1.5em;
-	padding-left: 5px;
-}
-
-.v-debugwindow-button {
-	border: none;
-	background-color: transparent;
-	color: #666;
-}
-
-.v-debugwindow-button:hover {
-	color: #000;
-	text-decoration: underline;
-}
-
-.v-debugwindow-button-active {
-	color: #666;
-	box-shadow: 1px 1px 3px 0 inset;
-}
-
-.v-debugwindow-content {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	box-shadow: 0px 0px 7px 0 rgba(55, 55, 55, 0.6);
-	background-color: #fff;
-	border: 1px solid #666;
-	border-top: none;
-}
-
-.v-debugwindow-menu {
-	background-color: #fff;
-	padding: 4px;
-	border: 1px solid #999;
-	border-top: none;
-	border-radius: 0 0 5px 5px;
-	box-shadow: 0px 0px 7px 0 rgba(55, 55, 55, 0.6);
-}
-
-.v-debugwindow-menu-content {
-	min-width: 100px;
-}
-
-.v-debugwindow-menu-content .v-debugwindow-button {
-	line-height: 22px;
-}
-
-.v-debugwindow-menu-content>div>.v-debugwindow-button {
-	width: 33%;
-}
-
-.v-debugwindow-row {
-	display: table-row;
-}
-
-.v-debugwindow-row:nth-child(odd) {
-	background-color: rgba(0, 61, 255, 0.11);
-}
-
-.v-debugwindow-row>span {
-	display: table-cell;
-	padding: 4px;
-}
-
-.v-debugwindow-row.SEVERE {
-	color: #550000;
-	background-color: #FFC5C5;
-}
-
-.v-debugwindow-row.WARNING {
-	background-color: #FFFF99;
-}
-
-.v-debugwindow-row.FINE {
-	color: #777;
-}
-
-.v-debugwindow-row.FINER {
-	color: #888;
-}
-
-.v-debugwindow-row.FINEST {
-	color: #888;
-}
-
-.v-debugwindow-row>span.caption {
-	color: #999;
-	text-align: right;
-	white-space: nowrap;
-}
-
-.v-debugwindow-row>span.value {
-	width: 100%;
-}
-
-.v-debugwindow-log {
-	font-family: monospace;
-}
-
-.v-debugwindow-log .v-debugwindow-reset {
-	color: #fff;
-	background-color: #4C92ED;
-	padding: 4px;
-}
-
-.v-debugwindow-log .v-debugwindow-time {
-	text-align: right;
-	color: #999;
-}
-
-.v-debugwindow-log .v-debugwindow-message {
-	white-space: nowrap;
-	width: 100%;
-}
-
-.v-debugwindow-log .v-debugwindow-message:hover {
-	white-space: normal;
-	word-wrap: break-word;
-}
-
-.v-debugwindow-log .v-debugwindow-message em {
-	background-color: #C4E6F8;
-}
-
-.v-debugwindow-hierarchy .v-debugwindow-info {
-	padding: 1em;
-}
-
-.v-debugwindow-network .v-debugwindow-row {
-	display: block !important;
-}
-
-.v-debugwindow-network .v-debugwindow-row>span {
-	display: inline;
 }
 
 .v-generated-body {
@@ -337,19 +99,17 @@
 	overflow: hidden;
 }
 
-.runo .v-absolutelayout-margin,.runo .v-absolutelayout-canvas {
+.runo .v-absolutelayout-margin, .runo .v-absolutelayout-canvas {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.runo .v-absolutelayout.v-has-height>div,.runo .v-absolutelayout.v-has-height>div>div
-	{
+.runo .v-absolutelayout.v-has-height > div, .runo .v-absolutelayout.v-has-height > div > div {
 	height: 100%;
 }
 
-.runo .v-absolutelayout.v-has-width>div,.runo .v-absolutelayout.v-has-width>div>div
-	{
+.runo .v-absolutelayout.v-has-width > div, .runo .v-absolutelayout.v-has-width > div > div {
 	width: 100%;
 }
 
@@ -392,7 +152,12 @@
 	font-size: 0;
 }
 
-.runo .v-browserframe>span {
+.v-webkit.v-ios .runo .v-browserframe {
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
+}
+
+.runo .v-browserframe > span {
 	font-size: 13px;
 }
 
@@ -426,7 +191,7 @@
 	cursor: default;
 }
 
-.runo .v-button-wrap,.runo .v-button-caption {
+.runo .v-button-wrap, .runo .v-button-caption {
 	vertical-align: baseline;
 	white-space: nowrap;
 	font: inherit;
@@ -538,12 +303,7 @@
 	padding: 0;
 }
 
-.runo .v-checkbox {
-	display: block;
-}
-
-.runo .v-checkbox,.runo .v-checkbox label,.runo .v-checkbox input,.runo .v-checkbox .v-icon
-	{
+.runo .v-checkbox, .runo .v-checkbox label, .runo .v-checkbox input, .runo .v-checkbox .v-icon {
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -607,6 +367,10 @@
 	margin: 1px auto;
 }
 
+.runo .v-colorpicker.v-default-caption-width {
+	width: 100px;
+}
+
 .runo .v-colorpicker-history {
 	margin: 5px;
 }
@@ -631,8 +395,7 @@
 	background-color: #eaeaea;
 }
 
-.runo .v-colorpicker-popup .v-tabsheet-content .v-tabsheet-tabsheetpanel
-	{
+.runo .v-colorpicker-popup .v-tabsheet-content .v-tabsheet-tabsheetpanel {
 	background: transparent;
 }
 
@@ -667,15 +430,13 @@
 	opacity: 0;
 }
 
-.runo .v-colorpicker-popup .rgb-gradient .v-colorpicker-gradient-background
-	{
+.runo .v-colorpicker-popup .rgb-gradient .v-colorpicker-gradient-background {
 	width: 220px;
 	height: 220px;
 	background: url(../base/colorpicker/images/gradient2.png);
 }
 
-.runo .v-colorpicker-popup .hsv-gradient .v-colorpicker-gradient-foreground
-	{
+.runo .v-colorpicker-popup .hsv-gradient .v-colorpicker-gradient-foreground {
 	background: url(../base/colorpicker/images/gradient.png);
 }
 
@@ -791,7 +552,7 @@
 	background-color: #fff;
 }
 
-.runo .v-calendar-header-month,.runo .v-calendar-header-week {
+.runo .v-calendar-header-month, .runo .v-calendar-header-week {
 	border-bottom: 1px solid #c1c1c1;
 }
 
@@ -816,29 +577,25 @@
 	padding-left: 19px;
 }
 
-.runo .v-calendar-header-week .v-calendar-back,.runo .v-calendar-header-week .v-calendar-next
-	{
+.runo .v-calendar-header-week .v-calendar-back, .runo .v-calendar-header-week .v-calendar-next {
 	border: none;
 	padding: 0;
 	margin: 0;
 	height: 12px;
 	width: 12px;
 	overflow: hidden;
-	background: transparent url(../base/calendar/img/arrows.png) no-repeat
-		50% 0;
+	background: transparent url(../base/calendar/img/arrows.png) no-repeat 50% 0;
 	opacity: 0.3;
 	filter: alpha(opacity = 30);
 	cursor: default;
 }
 
-.runo .v-calendar-header-week .v-calendar-back:hover,.runo .v-calendar-header-week .v-calendar-next:hover
-	{
+.runo .v-calendar-header-week .v-calendar-back:hover, .runo .v-calendar-header-week .v-calendar-next:hover {
 	opacity: 0.6;
 	filter: alpha(opacity = 60);
 }
 
-.runo .v-calendar-header-week .v-calendar-back:active,.runo .v-calendar-header-week .v-calendar-next:active
-	{
+.runo .v-calendar-header-week .v-calendar-back:active, .runo .v-calendar-header-week .v-calendar-next:active {
 	opacity: 1;
 	filter: alpha(opacity = 100);
 }
@@ -909,8 +666,7 @@
 	filter: alpha(opacity = 60);
 }
 
-.runo .v-calendar-month .v-calendar-spacer,.runo .v-calendar-month .v-calendar-bottom-spacer,.runo .v-calendar-month .v-calendar-bottom-spacer-empty
-	{
+.runo .v-calendar-month .v-calendar-spacer, .runo .v-calendar-month .v-calendar-bottom-spacer, .runo .v-calendar-month .v-calendar-bottom-spacer-empty {
 	height: 15px;
 	font-size: 11px;
 }
@@ -1016,8 +772,7 @@
 	outline: none;
 }
 
-.runo .v-calendar-day-times .v-datecellslot,.runo .v-calendar-day-times .v-datecellslot-even
-	{
+.runo .v-calendar-day-times .v-datecellslot, .runo .v-calendar-day-times .v-datecellslot-even {
 	border-bottom: 1px solid #ccc;
 }
 
@@ -1137,13 +892,11 @@
 	width: 42px;
 }
 
-.runo .v-calendar-day-times-Vsized .v-datecellslot,.runo .v-calendar-day-times-Vsized .v-datecellslot-even
-	{
+.runo .v-calendar-day-times-Vsized .v-datecellslot, .runo .v-calendar-day-times-Vsized .v-datecellslot-even {
 	height: 18px;
 }
 
-.runo .v-calendar-day-times-Hsized,.runo .v-calendar-day-times-Hsized .v-datecellslot,.runo .v-calendar-day-times-Hsized .v-datecellslot-even
-	{
+.runo .v-calendar-day-times-Hsized, .runo .v-calendar-day-times-Hsized .v-datecellslot, .runo .v-calendar-day-times-Hsized .v-datecellslot-even {
 	width: 200px;
 }
 
@@ -1151,9 +904,16 @@
 	height: 100%;
 }
 
-.runo.v-app,.runo .v-window,.runo .v-popupview-popup,.runo .v-label,.runo .v-caption
-	{
+.runo.v-app, .runo .v-window, .runo .v-popupview-popup, .runo .v-label, .runo .v-caption {
 	cursor: default;
+}
+
+.runo .v-window {
+	box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.5);
+}
+
+.runo .v-datefield-popup, .runo .v-filterselect-suggestpopup, .runo .v-menubar-popup, .runo .v-slider-feedback, .runo .v-popupview-popup, .runo .v-contextmenu {
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 body .runo.v-app .v-app-loading {
@@ -1176,17 +936,17 @@ body .runo.v-app .v-app-loading {
 	border-top: 1px solid transparent;
 }
 
-.runo .v-ui:active,.runo .v-ui:focus {
+.runo .v-ui:active, .runo .v-ui:focus {
 	outline: none;
 }
 
-.runo.v-app select,.runo .v-window select {
+.runo.v-app select, .runo .v-window select {
 	margin: 0;
 }
 
 .runo .v-disabled {
 	opacity: 0.3;
-	filter: alpha(opacity = 30);
+	filter: alpha(opacity=30);
 	cursor: default;
 }
 
@@ -1198,7 +958,7 @@ body .runo.v-app .v-app-loading {
 	zoom: 1;
 }
 
-*+html .runo .v-disabled {
+* + html .runo .v-disabled {
 	zoom: 1;
 }
 
@@ -1228,10 +988,20 @@ body .runo.v-app .v-app-loading {
 .runo .v-tooltip {
 	cursor: default;
 	background: #fff;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.runo .v-tooltip pre.v-tooltip-pre {
+	font: inherit;
+	white-space: pre-wrap;
 }
 
 .runo .v-tooltip-text {
 	overflow: auto;
+}
+
+.runo .v-tooltip-text pre {
+	margin: 0px;
 }
 
 .runo .v-tooltip .v-errormessage {
@@ -1248,6 +1018,11 @@ body .runo.v-app .v-app-loading {
 	padding: 0;
 	border: 0;
 	margin: 0;
+}
+
+.runo .v-contextmenu .gwt-MenuBar {
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .runo .v-contextmenu .gwt-MenuItem div {
@@ -1280,13 +1055,11 @@ body .runo.v-app .v-app-loading {
 	white-space: nowrap;
 }
 
-.runo .v-label h1,.runo .v-label h2,.runo .v-label h3,.runo .v-label h4,.runo .v-label h5,.runo .v-label h6
-	{
+.runo .v-label h1, .runo .v-label h2, .runo .v-label h3, .runo .v-label h4, .runo .v-label h5, .runo .v-label h6 {
 	line-height: normal;
 }
 
-.runo .v-loading-indicator,.runo .v-loading-indicator-delay,.runo .v-loading-indicator-wait
-	{
+.runo .v-loading-indicator, .runo .v-loading-indicator-delay, .runo .v-loading-indicator-wait {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1306,8 +1079,7 @@ body .runo.v-app .v-app-loading {
 	background-image: url(../base/common/img/loading-indicator-wait.gif);
 }
 
-.runo.v-app input[type="text"],.runo.v-app input[type="password"],.runo.v-app input[type="reset"],.runo.v-app select,.runo.v-app textarea,.runo .v-window input[type="text"],.runo .v-window input[type="password"],.runo .v-window input[type="reset"],.runo .v-window select,.runo .v-window textarea
-	{
+.runo.v-app input[type="text"], .runo.v-app input[type="password"], .runo.v-app input[type="reset"], .runo.v-app select, .runo.v-app textarea, .runo .v-window input[type="text"], .runo .v-window input[type="password"], .runo .v-window input[type="reset"], .runo .v-window select, .runo .v-window textarea {
 	padding: 2px;
 }
 
@@ -1319,7 +1091,7 @@ body .runo.v-app .v-app-loading {
 	z-index: 60000;
 	position: absolute !important;
 	opacity: 0.5;
-	filter: alpha(opacity = 50);
+	filter: alpha(opacity=50);
 	cursor: default;
 }
 
@@ -1345,24 +1117,60 @@ body .runo.v-app .v-app-loading {
 	-webkit-overflow-scrolling: none;
 }
 
+.runo .v-scrollable.v-panel-content > .v-widget {
+	vertical-align: middle;
+	overflow: hidden;
+}
+
 .runo.v-overlay-container {
 	width: 0;
 	height: 0;
 }
 
-.runo .v-vertical.v-margin-top,.runo .v-horizontal.v-margin-top {
+.runo .v-reconnect-dialog {
+	color: white;
+	top: 12px;
+	right: 12px;
+	max-width: 100%;
+	border-radius: 0;
+	-webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+	padding: 10px;
+	background-color: #444;
+	text-align: center;
+}
+
+.runo .v-reconnect-dialog .text {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.runo .v-reconnect-dialog .spinner {
+	background-image: url(../base/common/img/reconnect-spinner.gif);
+	width: 31px;
+	height: 31px;
+	display: none;
+	vertical-align: middle;
+}
+
+.runo .v-reconnect-dialog.active .spinner {
+	display: inline-block;
+}
+
+.runo .v-vertical.v-margin-top, .runo .v-horizontal.v-margin-top {
 	padding-top: 12px;
 }
 
-.runo .v-vertical.v-margin-right,.runo .v-horizontal.v-margin-right {
+.runo .v-vertical.v-margin-right, .runo .v-horizontal.v-margin-right {
 	padding-right: 12px;
 }
 
-.runo .v-vertical.v-margin-bottom,.runo .v-horizontal.v-margin-bottom {
+.runo .v-vertical.v-margin-bottom, .runo .v-horizontal.v-margin-bottom {
 	padding-bottom: 12px;
 }
 
-.runo .v-vertical.v-margin-left,.runo .v-horizontal.v-margin-left {
+.runo .v-vertical.v-margin-left, .runo .v-horizontal.v-margin-left {
 	padding-left: 12px;
 }
 
@@ -1370,7 +1178,7 @@ body .runo.v-app .v-app-loading {
 	padding-top: 24px;
 }
 
-.runo .v-gridlayout,.runo .v-verticallayout,.runo .v-horizontallayout {
+.runo .v-gridlayout, .runo .v-verticallayout, .runo .v-horizontallayout {
 	font-size: 0;
 	line-height: normal;
 }
@@ -1397,7 +1205,7 @@ body .runo.v-app .v-app-loading {
 	height: 6px;
 }
 
-.runo .v-vertical,.runo .v-horizontal {
+.runo .v-vertical, .runo .v-horizontal {
 	display: inline-block;
 }
 
@@ -1405,8 +1213,7 @@ body .runo.v-app .v-app-loading {
 	white-space: nowrap;
 }
 
-.runo .v-layout.v-vertical>.v-expand,.runo .v-layout.v-horizontal>.v-expand
-	{
+.runo .v-layout.v-vertical > .v-expand, .runo .v-layout.v-horizontal > .v-expand {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1414,13 +1221,13 @@ body .runo.v-app .v-app-loading {
 	height: 100%;
 }
 
-.runo .v-slot,.runo .v-spacing {
+.runo .v-slot, .runo .v-spacing {
 	display: inline-block;
 	white-space: normal;
 	vertical-align: top;
 }
 
-.runo .v-vertical>.v-slot:after {
+.runo .v-vertical > .v-slot:after {
 	display: inline-block;
 	clear: both;
 	width: 0;
@@ -1429,32 +1236,30 @@ body .runo.v-app .v-app-loading {
 	line-height: 0;
 }
 
-.runo .v-vertical>.v-slot,.runo .v-vertical>.v-expand>.v-slot {
+.runo .v-vertical > .v-slot, .runo .v-vertical > .v-expand > .v-slot {
 	display: block;
 	clear: both;
 }
 
-.runo .v-horizontal>.v-slot,.runo .v-horizontal>.v-expand>.v-slot {
+.runo .v-horizontal > .v-slot, .runo .v-horizontal > .v-expand > .v-slot {
 	height: 100%;
 }
 
-.runo .v-horizontal>.v-expand>.v-slot {
+.runo .v-horizontal > .v-expand > .v-slot {
 	position: relative;
 }
 
-.runo .v-vertical>.v-spacing,.runo .v-vertical>.v-expand>.v-spacing {
+.runo .v-vertical > .v-spacing, .runo .v-vertical > .v-expand > .v-spacing {
 	width: 0;
 	display: block;
 	clear: both;
 }
 
-.runo .v-horizontal>.v-spacing,.runo .v-horizontal>.v-expand>.v-spacing
-	{
+.runo .v-horizontal > .v-spacing, .runo .v-horizontal > .v-expand > .v-spacing {
 	height: 0;
 }
 
-.runo .v-align-middle:before,.runo .v-align-bottom:before,.runo .v-expand>.v-align-middle:before,.runo .v-expand>.v-align-bottom:before
-	{
+.runo .v-align-middle:before, .runo .v-align-bottom:before, .runo .v-expand > .v-align-middle:before, .runo .v-expand > .v-align-bottom:before {
 	content: "";
 	display: inline-block;
 	height: 100%;
@@ -1462,19 +1267,19 @@ body .runo.v-app .v-app-loading {
 	width: 0;
 }
 
-.runo .v-align-middle,.runo .v-align-bottom {
+.runo .v-align-middle, .runo .v-align-bottom {
 	white-space: nowrap;
 }
 
-.runo .v-align-middle>.v-widget,.runo .v-align-bottom>.v-widget {
+.runo .v-align-middle > .v-widget, .runo .v-align-right > .v-widget, .runo .v-align-center > .v-widget, .runo .v-align-bottom > .v-widget {
 	display: inline-block;
 }
 
-.runo .v-align-middle,.runo .v-align-middle>.v-widget {
+.runo .v-align-middle, .runo .v-align-middle > .v-widget {
 	vertical-align: middle;
 }
 
-.runo .v-align-bottom,.runo .v-align-bottom>.v-widget {
+.runo .v-align-bottom, .runo .v-align-bottom > .v-widget {
 	vertical-align: bottom;
 }
 
@@ -1482,7 +1287,7 @@ body .runo.v-app .v-app-loading {
 	text-align: center;
 }
 
-.runo .v-align-center>.v-widget {
+.runo .v-align-center > .v-widget {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -1491,11 +1296,11 @@ body .runo.v-app .v-app-loading {
 	text-align: right;
 }
 
-.runo .v-align-right>.v-widget {
+.runo .v-align-right > .v-widget {
 	margin-left: auto;
 }
 
-.runo .v-has-caption,.runo .v-has-caption>.v-caption {
+.runo .v-has-caption, .runo .v-has-caption > .v-caption {
 	display: inline-block;
 }
 
@@ -1504,33 +1309,32 @@ body .runo.v-app .v-app-loading {
 	vertical-align: middle;
 }
 
-.runo .v-caption-on-left,.runo .v-caption-on-right {
+.runo .v-caption-on-left, .runo .v-caption-on-right {
 	white-space: nowrap;
 }
 
-.runo .v-caption-on-top>.v-caption,.runo .v-caption-on-bottom>.v-caption
-	{
+.runo .v-caption-on-top > .v-caption, .runo .v-caption-on-bottom > .v-caption {
 	display: block;
 }
 
-.runo .v-caption-on-left>.v-caption {
+.runo .v-caption-on-left > .v-caption {
 	padding-right: 0.5em;
 }
 
-.runo .v-caption-on-right>.v-caption {
+.runo .v-caption-on-right > .v-caption {
 	vertical-align: top;
 }
 
-.runo .v-caption-on-left>.v-widget,.runo .v-caption-on-right>.v-widget {
+.runo .v-caption-on-left > .v-widget, .runo .v-caption-on-right > .v-widget {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.runo .v-has-caption.v-has-width>.v-widget {
+.runo .v-has-caption.v-has-width > .v-widget {
 	width: 100% !important;
 }
 
-.runo .v-has-caption.v-has-height>.v-widget {
+.runo .v-has-caption.v-has-height > .v-widget {
 	height: 100% !important;
 }
 
@@ -1546,19 +1350,17 @@ body .runo.v-app .v-app-loading {
 	display: block;
 }
 
-.runo .v-csslayout-margin,.runo .v-csslayout-container {
+.runo .v-csslayout-margin, .runo .v-csslayout-container {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.runo .v-has-width>.v-csslayout-margin,.runo .v-has-width>.v-csslayout-margin>.v-csslayout-container
-	{
+.runo .v-has-width > .v-csslayout-margin, .runo .v-has-width > .v-csslayout-margin > .v-csslayout-container {
 	width: 100%;
 }
 
-.runo .v-has-height>.v-csslayout-margin,.runo .v-has-height>.v-csslayout-margin>.v-csslayout-container
-	{
+.runo .v-has-height > .v-csslayout-margin, .runo .v-has-height > .v-csslayout-margin > .v-csslayout-container {
 	height: 100%;
 }
 
@@ -1576,10 +1378,6 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-csslayout-margin-right {
 	padding-right: 12px;
-}
-
-.runo .v-customcomponent {
-	overflow: hidden;
 }
 
 .runo .v-customlayout {
@@ -1604,7 +1402,7 @@ body .runo.v-app .v-app-loading {
 	vertical-align: top;
 }
 
-.runo .v-has-width>input.v-datefield-textfield {
+.runo .v-has-width > input.v-datefield-textfield {
 	width: 100%;
 }
 
@@ -1645,8 +1443,7 @@ body .runo.v-app .v-app-loading {
 	font-size: 11.7px;
 }
 
-.runo .v-datefield-calendarpanel-day,.runo .v-datefield-calendarpanel-day-today
-	{
+.runo .v-datefield-calendarpanel-day, .runo .v-datefield-calendarpanel-day-today {
 	cursor: pointer;
 }
 
@@ -1654,19 +1451,16 @@ body .runo.v-app .v-app-loading {
 	border: 1px solid #ddd;
 }
 
-.runo .v-disabled .v-datefield-calendarpanel-day,.runo .v-disabled .v-datefield-calendarpanel-day-today
-	{
+.runo .v-disabled .v-datefield-calendarpanel-day, .runo .v-disabled .v-datefield-calendarpanel-day-today, .runo .v-disabled.v-datefield-popupcalendar .v-datefield-button {
 	cursor: default;
 }
 
-.runo .v-datefield-calendarpanel-day-disabled,.runo .v-datefield-calendarpanel-day-outside-range
-	{
+.runo .v-datefield-calendarpanel-day-disabled, .runo .v-datefield-calendarpanel-day-outside-range {
 	cursor: default;
 	opacity: 0.5;
 }
 
-.runo .v-datefield-calendarpanel-prevyear button.outside-range,.runo .v-datefield-calendarpanel-nextyear button.outside-range,.runo .v-datefield-calendarpanel-prevmonth button.outside-range,.runo .v-datefield-calendarpanel-nextmonth button.outside-range
-	{
+.runo .v-datefield-calendarpanel-prevyear button.outside-range, .runo .v-datefield-calendarpanel-nextyear button.outside-range, .runo .v-datefield-calendarpanel-prevmonth button.outside-range, .runo .v-datefield-calendarpanel-nextmonth button.outside-range {
 	opacity: 0.5;
 }
 
@@ -1696,6 +1490,10 @@ body .runo.v-app .v-app-loading {
 	background: #fff;
 }
 
+.v-ie11 .runo .v-datefield-popup {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
 .runo .v-datefield-popupcalendar input.v-datefield-textfield {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1720,7 +1518,7 @@ body .runo.v-app .v-app-loading {
 	vertical-align: top;
 }
 
-.runo .v-has-width>input.v-inline-datefield-textfield {
+.runo .v-has-width > input.v-inline-datefield-textfield {
 	width: 100%;
 }
 
@@ -1761,8 +1559,7 @@ body .runo.v-app .v-app-loading {
 	font-size: 11.7px;
 }
 
-.runo .v-inline-datefield-calendarpanel-day,.runo .v-inline-datefield-calendarpanel-day-today
-	{
+.runo .v-inline-datefield-calendarpanel-day, .runo .v-inline-datefield-calendarpanel-day-today {
 	cursor: pointer;
 }
 
@@ -1770,19 +1567,16 @@ body .runo.v-app .v-app-loading {
 	border: 1px solid #ddd;
 }
 
-.runo .v-disabled .v-inline-datefield-calendarpanel-day,.runo .v-disabled .v-inline-datefield-calendarpanel-day-today
-	{
+.runo .v-disabled .v-inline-datefield-calendarpanel-day, .runo .v-disabled .v-inline-datefield-calendarpanel-day-today, .runo .v-disabled.v-inline-datefield-popupcalendar .v-inline-datefield-button {
 	cursor: default;
 }
 
-.runo .v-inline-datefield-calendarpanel-day-disabled,.runo .v-inline-datefield-calendarpanel-day-outside-range
-	{
+.runo .v-inline-datefield-calendarpanel-day-disabled, .runo .v-inline-datefield-calendarpanel-day-outside-range {
 	cursor: default;
 	opacity: 0.5;
 }
 
-.runo .v-inline-datefield-calendarpanel-prevyear button.outside-range,.runo .v-inline-datefield-calendarpanel-nextyear button.outside-range,.runo .v-inline-datefield-calendarpanel-prevmonth button.outside-range,.runo .v-inline-datefield-calendarpanel-nextmonth button.outside-range
-	{
+.runo .v-inline-datefield-calendarpanel-prevyear button.outside-range, .runo .v-inline-datefield-calendarpanel-nextyear button.outside-range, .runo .v-inline-datefield-calendarpanel-prevmonth button.outside-range, .runo .v-inline-datefield-calendarpanel-nextmonth button.outside-range {
 	opacity: 0.5;
 }
 
@@ -1812,8 +1606,11 @@ body .runo.v-app .v-app-loading {
 	background: #fff;
 }
 
-.runo .v-inline-datefield-popupcalendar input.v-inline-datefield-textfield
-	{
+.v-ie11 .runo .v-inline-datefield-popup {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.runo .v-inline-datefield-popupcalendar input.v-inline-datefield-textfield {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1825,6 +1622,8 @@ body .runo.v-app .v-app-loading {
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	position: relative;
+	-ms-touch-action: none;
+	touch-action: none;
 }
 
 .runo [draggable=true] {
@@ -1845,7 +1644,7 @@ body .runo.v-app .v-app-loading {
 	height: 100%;
 	opacity: 0;
 	background-color: cyan;
-	filter: alpha(opacity = 0);
+	filter: alpha(opacity=0);
 }
 
 .runo .v-ddwrapper-over {
@@ -1864,8 +1663,7 @@ body .runo.v-app .v-app-loading {
 	padding: 2px;
 }
 
-.runo.v-app .v-ddwrapper-over-top,.runo .v-window .v-ddwrapper-over-top,.runo .v-popupview-popup .v-ddwrapper-over-top
-	{
+.runo.v-app .v-ddwrapper-over-top, .runo .v-window .v-ddwrapper-over-top, .runo .v-popupview-popup .v-ddwrapper-over-top {
 	border: none;
 	border-top: 2px solid #1d9dff;
 	background-color: transparent;
@@ -1876,8 +1674,7 @@ body .runo.v-app .v-app-loading {
 	border-radius: 0;
 }
 
-.runo.v-app .v-ddwrapper-over-bottom,.runo .v-window .v-ddwrapper-over-bottom,.runo .v-popupview-popup .v-ddwrapper-over-bottom
-	{
+.runo.v-app .v-ddwrapper-over-bottom, .runo .v-window .v-ddwrapper-over-bottom, .runo .v-popupview-popup .v-ddwrapper-over-bottom {
 	border: none;
 	border-bottom: 2px solid #1d9dff;
 	background-color: transparent;
@@ -1888,8 +1685,7 @@ body .runo.v-app .v-app-loading {
 	border-radius: 0;
 }
 
-.runo.v-app .v-ddwrapper-over-left,.runo .v-window .v-ddwrapper-over-left,.runo .v-popupview-popup .v-ddwrapper-over-left
-	{
+.runo.v-app .v-ddwrapper-over-left, .runo .v-window .v-ddwrapper-over-left, .runo .v-popupview-popup .v-ddwrapper-over-left {
 	border: none;
 	border-left: 2px solid #1d9dff;
 	background-color: transparent;
@@ -1900,8 +1696,7 @@ body .runo.v-app .v-app-loading {
 	border-radius: 0;
 }
 
-.runo.v-app .v-ddwrapper-over-right,.runo .v-window .v-ddwrapper-over-right,.runo .v-popupview-popup .v-ddwrapper-over-right
-	{
+.runo.v-app .v-ddwrapper-over-right, .runo .v-window .v-ddwrapper-over-right, .runo .v-popupview-popup .v-ddwrapper-over-right {
 	border: none;
 	border-right: 2px solid #1d9dff;
 	background-color: transparent;
@@ -1912,29 +1707,25 @@ body .runo.v-app .v-app-loading {
 	border-radius: 0;
 }
 
-.runo .v-ddwrapper,.runo .v-ddwrapper-over,.runo.v-app .v-ddwrapper-over-top,.runo .v-window .v-ddwrapper-over-top,.runo .v-popupview-popup .v-ddwrapper-over-top,.runo.v-app .v-ddwrapper-over-bottom,.runo .v-window .v-ddwrapper-over-bottom,.runo .v-popupview-popup .v-ddwrapper-over-bottom,.runo.v-app .v-ddwrapper-over-left,.runo .v-window .v-ddwrapper-over-left,.runo .v-popupview-popup .v-ddwrapper-over-left,.runo.v-app .v-ddwrapper-over-right,.runo .v-window .v-ddwrapper-over-right,.runo .v-popupview-popup .v-ddwrapper-over-right
-	{
+.runo .v-ddwrapper, .runo .v-ddwrapper-over, .runo.v-app .v-ddwrapper-over-top, .runo .v-window .v-ddwrapper-over-top, .runo .v-popupview-popup .v-ddwrapper-over-top, .runo.v-app .v-ddwrapper-over-bottom, .runo .v-window .v-ddwrapper-over-bottom, .runo .v-popupview-popup .v-ddwrapper-over-bottom, .runo.v-app .v-ddwrapper-over-left, .runo .v-window .v-ddwrapper-over-left, .runo .v-popupview-popup .v-ddwrapper-over-left, .runo.v-app .v-ddwrapper-over-right, .runo .v-window .v-ddwrapper-over-right, .runo .v-popupview-popup .v-ddwrapper-over-right {
 	border-color: rgba(0, 109, 232, 0.6);
 }
 
-.runo .v-ddwrapper-over-top:before,.runo .v-ddwrapper-over-bottom:after,.runo .v-ddwrapper-over-left:before,.runo .v-ddwrapper-over-right:before
-	{
+.runo .v-ddwrapper-over-top:before, .runo .v-ddwrapper-over-bottom:after, .runo .v-ddwrapper-over-left:before, .runo .v-ddwrapper-over-right:before {
 	display: block;
 	position: absolute;
 	width: 6px;
 	height: 6px;
 	margin-top: -4px;
 	margin-left: -2px;
-	background: transparent url(../base/common/img/drag-slot-dot.png)
-		no-repeat;
+	background: transparent url(../base/common/img/drag-slot-dot.png) no-repeat;
 }
 
 .runo .v-ddwrapper-over-bottom:after {
 	margin-top: -2px;
 }
 
-.runo .v-ddwrapper-over-left:before,.runo .v-ddwrapper-over-right:before
-	{
+.runo .v-ddwrapper-over-left:before, .runo .v-ddwrapper-over-right:before {
 	background-position: 0 -6px;
 	margin-top: -2px;
 	margin-left: -4px;
@@ -1969,8 +1760,7 @@ body .runo.v-app .v-app-loading {
 	border-bottom: none;
 }
 
-.runo .no-horizontal-drag-hints .v-ddwrapper-over-left:before,.runo .no-horizontal-drag-hints .v-ddwrapper-over-right:before,.runo .no-vertical-drag-hints .v-ddwrapper-over-top:before,.runo .no-vertical-drag-hints .v-ddwrapper-over-bottom:after
-	{
+.runo .no-horizontal-drag-hints .v-ddwrapper-over-left:before, .runo .no-horizontal-drag-hints .v-ddwrapper-over-right:before, .runo .no-vertical-drag-hints .v-ddwrapper-over-top:before, .runo .no-vertical-drag-hints .v-ddwrapper-over-bottom:after {
 	display: none;
 }
 
@@ -1978,11 +1768,144 @@ body .runo.v-app .v-app-loading {
 	display: inline-block;
 }
 
-.runo .v-formlayout.v-has-width>table {
+.runo .v-escalator {
+	position: relative;
+}
+
+.runo .v-escalator-scroller {
+	position: absolute;
+	z-index: 1;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-escalator-scroller-horizontal {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: hidden;
+	-ms-overflow-y: hidden;
+}
+
+.runo .v-escalator-scroller-vertical {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	-ms-overflow-x: hidden;
+}
+
+.runo .v-escalator-tablewrapper {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 5;
+}
+
+.runo .v-escalator-tablewrapper > table {
+	border-spacing: 0;
+	table-layout: fixed;
+	width: inherit;
+}
+
+.runo .v-escalator-header-deco, .runo .v-escalator-footer-deco {
+	position: absolute;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-escalator-horizontal-scrollbar-deco {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-escalator-header, .runo .v-escalator-body, .runo .v-escalator-footer {
+	position: absolute;
+	left: 0;
+	width: inherit;
+	z-index: 10;
+}
+
+.runo .v-escalator-header, .runo .v-escalator-header-deco {
+	top: 0;
+}
+
+.runo .v-escalator-footer, .runo .v-escalator-footer-deco {
+	bottom: 0;
+}
+
+.runo .v-escalator-body {
+	-ms-touch-action: none;
+	touch-action: none;
+	z-index: 0;
+	top: 0;
+}
+
+.runo .v-escalator-body .v-escalator-row {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.runo .v-escalator-row {
+	display: block;
+}
+
+.runo .v-escalator-row  > td, .runo .v-escalator-row  > th {
+	background-color: #fff;
+}
+
+.runo .v-escalator-row {
+	width: inherit;
+}
+
+.runo .v-escalator-cell {
+	display: block;
+	float: left;
+	padding: 2px;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+.runo .v-escalator-cell.frozen {
+	position: relative;
+	z-index: 1;
+}
+
+.runo .v-escalator-spacer {
+	position: absolute;
+	display: block;
+	background-color: #fff;
+}
+
+.runo .v-escalator-spacer  > td {
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-formlayout.v-has-width > table {
 	width: 100%;
 }
 
-.runo .v-formlayout.v-has-height>table {
+.runo .v-formlayout.v-has-height > table {
 	height: 100%;
 }
 
@@ -1999,46 +1922,652 @@ body .runo.v-app .v-app-loading {
 	white-space: nowrap;
 }
 
-.runo .v-formlayout-errorcell,.runo .v-formlayout-captioncell {
+.runo .v-formlayout-errorcell, .runo .v-formlayout-captioncell {
 	width: 1px;
+	min-width: 1px;
 }
 
 .runo .v-formlayout-captioncell .v-caption {
 	overflow: visible;
 }
 
-.runo .v-formlayout-spacing>tbody>.v-formlayout-row>.v-formlayout-captioncell,.runo .v-formlayout-spacing>tbody>.v-formlayout-row>.v-formlayout-contentcell,.runo .v-formlayout-spacing>tbody>.v-formlayout-row>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-captioncell, .runo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-contentcell, .runo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-errorcell {
 	padding-top: 6px;
 }
 
-.runo .v-formlayout-spacing>tbody>.v-formlayout-firstrow>.v-formlayout-captioncell,.runo .v-formlayout-spacing>tbody>.v-formlayout-firstrow>.v-formlayout-contentcell,.runo .v-formlayout-spacing>tbody>.v-formlayout-firstrow>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-spacing > tbody > .v-formlayout-firstrow > .v-formlayout-captioncell, .runo .v-formlayout-spacing > tbody > .v-formlayout-firstrow > .v-formlayout-contentcell, .runo .v-formlayout-spacing > tbody > .v-formlayout-firstrow > .v-formlayout-errorcell {
 	padding-top: 0;
 }
 
-.runo .v-formlayout-margin-top>tbody>.v-formlayout-firstrow>.v-formlayout-captioncell,.runo .v-formlayout-margin-top>tbody>.v-formlayout-firstrow>.v-formlayout-contentcell,.runo .v-formlayout-margin-top>tbody>.v-formlayout-firstrow>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-captioncell, .runo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-contentcell, .runo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-errorcell {
 	padding-top: 12px;
 }
 
-.runo .v-formlayout-margin-bottom>tbody>.v-formlayout-lastrow>.v-formlayout-captioncell,.runo .v-formlayout-margin-bottom>tbody>.v-formlayout-lastrow>.v-formlayout-contentcell,.runo .v-formlayout-margin-bottom>tbody>.v-formlayout-lastrow>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-captioncell, .runo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-contentcell, .runo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-errorcell {
 	padding-bottom: 12px;
 }
 
-.runo .v-formlayout-margin-left>tbody>.v-formlayout-row>.v-formlayout-captioncell
-	{
+.runo .v-formlayout-margin-left > tbody > .v-formlayout-row > .v-formlayout-captioncell {
 	padding-left: 12px;
 }
 
-.runo .v-formlayout-margin-right>tbody>.v-formlayout-row>.v-formlayout-contentcell
-	{
+.runo .v-formlayout-margin-right > tbody > .v-formlayout-row > .v-formlayout-contentcell {
 	padding-right: 12px;
 }
 
 .runo .v-formlayout-captioncell .v-caption .v-required-field-indicator {
 	float: none;
+}
+
+.runo .v-grid {
+	position: relative;
+}
+
+.runo .v-grid-scroller {
+	position: absolute;
+	z-index: 1;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-grid-scroller-horizontal {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: hidden;
+	-ms-overflow-y: hidden;
+}
+
+.runo .v-grid-scroller-vertical {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	-ms-overflow-x: hidden;
+}
+
+.runo .v-grid-tablewrapper {
+	position: absolute;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 5;
+}
+
+.runo .v-grid-tablewrapper > table {
+	border-spacing: 0;
+	table-layout: fixed;
+	width: inherit;
+}
+
+.runo .v-grid-header-deco, .runo .v-grid-footer-deco {
+	position: absolute;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-grid-horizontal-scrollbar-deco {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-grid-header, .runo .v-grid-body, .runo .v-grid-footer {
+	position: absolute;
+	left: 0;
+	width: inherit;
+	z-index: 10;
+}
+
+.runo .v-grid-header, .runo .v-grid-header-deco {
+	top: 0;
+}
+
+.runo .v-grid-footer, .runo .v-grid-footer-deco {
+	bottom: 0;
+}
+
+.runo .v-grid-body {
+	-ms-touch-action: none;
+	touch-action: none;
+	z-index: 0;
+	top: 0;
+}
+
+.runo .v-grid-body .v-grid-row {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.runo .v-grid-row {
+	display: block;
+}
+
+.runo .v-grid-row  > td, .runo .v-grid-row  > th {
+	background-color: #fff;
+}
+
+.runo .v-grid-row {
+	width: inherit;
+}
+
+.runo .v-grid-cell {
+	display: block;
+	float: left;
+	padding: 2px;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+.runo .v-grid-cell.frozen {
+	position: relative;
+	z-index: 1;
+}
+
+.runo .v-grid-spacer {
+	position: absolute;
+	display: block;
+	background-color: #fff;
+}
+
+.runo .v-grid-spacer  > td {
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.runo .v-grid {
+	outline: none;
+}
+
+.runo .v-grid-scroller-vertical, .runo .v-grid-scroller-horizontal {
+	border: 1px solid #ddd;
+}
+
+.runo .v-grid-scroller-vertical {
+	border-left: none;
+}
+
+.runo .v-grid-scroller-horizontal {
+	border-top: none;
+}
+
+.runo .v-grid-tablewrapper {
+	border: 1px solid #ddd;
+}
+
+.runo .v-grid .header-drag-table {
+	border-spacing: 0;
+	position: relative;
+	table-layout: fixed;
+	width: inherit;
+}
+
+.runo .v-grid .header-drag-table .v-grid-header {
+	position: absolute;
+}
+
+.runo .v-grid .header-drag-table .v-grid-header  > .v-grid-cell {
+	border: 1px solid #ddd;
+	margin-top: -10px;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	z-index: 30000;
+}
+
+.runo .v-grid .header-drag-table .v-grid-header  > .v-grid-drop-marker {
+	background-color: #bfbfbf;
+	position: absolute;
+	width: 3px;
+}
+
+.runo .v-grid-sidebar.v-contextmenu {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 0;
+	z-index: 5;
+}
+
+.runo .v-grid-sidebar.v-contextmenu.v-grid-sidebar-popup {
+	right: auto;
+}
+
+.runo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button {
+	background: transparent;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+	padding: 0 4px;
+	text-align: right;
+	line-height: 1;
+}
+
+.runo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button[disabled] {
+	cursor: default;
+}
+
+.runo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button::-moz-focus-inner {
+	border: 0;
+}
+
+.runo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button:after {
+	content: "\f0c9";
+	display: block;
+	font-family: ThemeIcons, sans-serif;
+	font-size: 16px;
+}
+
+.runo .v-grid-sidebar.v-contextmenu.closed {
+	border-radius: 0;
+}
+
+.runo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button {
+	width: 100%;
+}
+
+.runo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button:after {
+	content: "\f0c9";
+	font-size: 16px;
+	line-height: 1;
+}
+
+.v-ie .runo .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button {
+	vertical-align: middle;
+}
+
+.runo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-content {
+	padding: 4px 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.runo .v-grid-sidebar.v-contextmenu .v-grid-sidebar-content .gwt-MenuBar .gwt-MenuItem .column-hiding-toggle {
+	text-shadow: none;
+}
+
+.runo .v-grid-cell {
+	background-color: #fff;
+	padding: 0 10px;
+	line-height: 24px;
+	text-overflow: ellipsis;
+}
+
+.runo .v-grid-cell  > * {
+	line-height: normal;
+	vertical-align: middle;
+}
+
+.runo .v-grid-cell  > div {
+	display: inline-block;
+}
+
+.runo .v-grid-cell.frozen {
+	-webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	border-right: 1px solid #ddd;
+}
+
+.runo .v-grid-cell.frozen  + th, .runo .v-grid-cell.frozen  + td {
+	border-left: none;
+}
+
+.runo .v-grid-row > td, .runo .v-grid-editor-cells > div {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.runo .v-grid-row > td:first-child, .runo .v-grid-editor-cells > div:first-child {
+	border-left: none;
+}
+
+.runo .v-grid-editor-cells.frozen > div {
+	-webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
+	border-right: 1px solid #ddd;
+	border-left: none;
+}
+
+.runo .v-grid-row-stripe > td {
+	background-color: #f2f2f2;
+}
+
+.runo .v-grid-row-selected > td {
+	background: #bfbfbf;
+}
+
+.runo .v-grid-row-focused > td {
+	
+}
+
+.runo .v-grid-header th {
+	position: relative;
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: inherit;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	
+	text-align: left;
+}
+
+.runo .v-grid-header th:first-child {
+	border-left: none;
+}
+
+.runo .v-grid-header .sort-asc, .runo .v-grid-header .sort-desc {
+	padding-right: 29px;
+}
+
+.runo .v-grid-header .sort-asc:after, .runo .v-grid-header .sort-desc:after {
+	font-family: ThemeIcons, sans-serif;
+	content: "\f0de" " " attr(sort-order);
+	position: absolute;
+	right: 10px;
+	font-size: 14px;
+}
+
+.runo .v-grid-header .sort-desc:after {
+	content: "\f0dd" " " attr(sort-order);
+}
+
+.runo .v-grid-column-resize-handle {
+	position: absolute;
+	width: 20px;
+	right: -10px;
+	top: 0px;
+	bottom: 0px;
+	cursor: col-resize;
+	z-index: 10;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.runo .v-grid-column-resize-simple-indicator {
+	position: absolute;
+	width: 3px;
+	top: 0px;
+	left: 10px;
+	z-index: 9001;
+	background: #fff;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.runo .v-grid-footer td {
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: inherit;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-bottom: none;
+	
+}
+
+.runo .v-grid-footer td:first-child {
+	border-left: none;
+}
+
+.runo .v-grid-header .v-grid-cell, .runo .v-grid-footer .v-grid-cell {
+	overflow: visible;
+}
+
+.runo .v-grid-column-header-content, .runo .v-grid-column-footer-content {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 24px;
+	vertical-align: baseline;
+}
+
+.runo .v-grid-header-deco {
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.runo .v-grid-footer-deco {
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.runo .v-grid-horizontal-scrollbar-deco {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+
+.runo .v-grid-cell-focused {
+	position: relative;
+}
+
+.runo .v-grid-cell-focused:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid;
+	display: none;
+	pointer-events: none;
+}
+
+.runo .v-grid:focus .v-grid-cell-focused:before {
+	display: block;
+}
+
+.runo .v-grid.v-disabled:focus .v-grid-cell-focused:before {
+	display: none;
+}
+
+.runo .v-grid-editor {
+	position: absolute;
+	z-index: 20;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin-top: -1px;
+	-webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+}
+
+.runo .v-grid-editor.unbuffered .v-grid-editor-footer {
+	width: 100%;
+}
+
+.runo .v-grid-editor-cells {
+	position: relative;
+	white-space: nowrap;
+}
+
+.runo .v-grid-editor-cells.frozen {
+	z-index: 2;
+}
+
+.runo .v-grid-editor-cells  > div {
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	background: #fff;
+}
+
+.runo .v-grid-editor-cells  > div:first-child {
+	border-left: none;
+}
+
+.runo .v-grid-editor-cells  > div  > * {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.runo .v-grid-editor-cells  > div .v-filterselect {
+	padding-left: 0;
+}
+
+.runo .v-grid-editor-cells  > div input[type="text"], .runo .v-grid-editor-cells  > div input[type="text"].v-filterselect-input, .runo .v-grid-editor-cells  > div input[type="password"] {
+	padding-left: 10px;
+}
+
+.runo .v-grid-editor-cells  > div input[type="text"]:not(.v-filterselect-input), .runo .v-grid-editor-cells  > div input[type="password"] {
+	padding-right: 5px;
+}
+
+.runo .v-grid-editor-cells  > div input[type="checkbox"] {
+	margin-left: 10px;
+}
+
+.runo .v-grid-editor-cells  > div .v-textfield, .runo .v-grid-editor-cells  > div .v-datefield, .runo .v-grid-editor-cells  > div .v-filterselect {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+.runo .v-grid-editor-cells  > div .v-select, .runo .v-grid-editor-cells  > div .v-select-select {
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.runo .v-grid-editor-cells  > div.not-editable.v-grid-cell {
+	float: none;
+}
+
+.runo .v-grid-editor-cells .error::before {
+	position: absolute;
+	display: block;
+	height: 0;
+	width: 0;
+	content: "";
+	border-top: 5px solid red;
+	border-right: 5px solid transparent;
+}
+
+.runo .v-grid-editor-cells .error, .runo .v-grid-editor-cells .error > input {
+	background-color: #fee;
+}
+
+.runo .v-grid-editor-footer {
+	display: table;
+	height: 24px;
+	border-top: 1px solid #ddd;
+	margin-top: -1px;
+	background: #fff;
+	padding: 0 5px;
+}
+
+.runo .v-grid-editor-footer  + .v-grid-editor-cells > div {
+	border-bottom: none;
+	border-top: 1px solid #ddd;
+}
+
+.runo .v-grid-editor-footer:first-child {
+	border-top: none;
+	margin-top: 0;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: -1px;
+}
+
+.runo .v-grid-editor-message, .runo .v-grid-editor-buttons {
+	display: table-cell;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.runo .v-grid-editor-message {
+	width: 100%;
+	position: relative;
+}
+
+.runo .v-grid-editor-message  > div {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 24px;
+	top: 0;
+}
+
+.runo .v-grid-editor-save {
+	margin-right: 4px;
+}
+
+.runo .v-grid-spacer {
+	padding-left: 1px;
+}
+
+.runo .v-grid-spacer > td {
+	display: block;
+	padding: 0;
+	background-color: #fff;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.runo .v-grid-spacer.stripe > td {
+	background-color: #f2f2f2;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.runo .v-grid-spacer-deco-container {
+	border-top: 1px solid transparent;
+	position: relative;
+	top: 0;
+	z-index: 5;
+}
+
+.runo .v-grid-spacer-deco {
+	top: 0;
+	left: 0;
+	width: 2px;
+	background-color: #bfbfbf;
+	position: absolute;
+	height: 100%;
+	pointer-events: none;
+}
+
+.runo .v-grid-cell > .v-progressbar {
+	width: 100%;
 }
 
 .runo .v-gridlayout {
@@ -2071,7 +2600,7 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 }
 
-.runo .v-gridlayout-spacing,.runo .v-gridlayout-spacing-off {
+.runo .v-gridlayout-spacing, .runo .v-gridlayout-spacing-off {
 	padding-left: 0;
 	padding-top: 0;
 }
@@ -2116,7 +2645,7 @@ body .runo.v-app .v-app-loading {
 	width: 200px;
 }
 
-.runo .v-app-loginpage .v-button,.runo .v-app-loginpage .v-button {
+.runo .v-app-loginpage .v-button {
 	float: left;
 }
 
@@ -2160,8 +2689,7 @@ body .runo.v-app .v-app-loading {
 	display: block;
 }
 
-.runo .v-menubar-submenu .v-menubar-menuitem *,.runo .v-menubar-submenu .v-menubar-menuitem-caption *
-	{
+.runo .v-menubar-submenu .v-menubar-menuitem *, .runo .v-menubar-submenu .v-menubar-menuitem-caption * {
 	white-space: nowrap;
 }
 
@@ -2179,9 +2707,9 @@ body .runo.v-app .v-app-loading {
 	font-size: 11.7px;
 }
 
-.runo .v-menubar-menuitem-disabled,.runo .v-menubar span.v-menubar-menuitem-disabled:hover,.runo .v-menubar span.v-menubar-menuitem-disabled:focus,.runo .v-menubar span.v-menubar-menuitem-disabled:active
-	{
-	color: #999;
+.runo .v-menubar-menuitem-disabled, .runo .v-menubar span.v-menubar-menuitem-disabled:hover, .runo .v-menubar span.v-menubar-menuitem-disabled:focus, .runo .v-menubar span.v-menubar-menuitem-disabled:active {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
 }
 
 .runo .v-menubar-more-menuitem {
@@ -2202,12 +2730,11 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 }
 
-.runo .v-menubar .v-icon,.runo .v-menubar-submenu .v-icon {
+.runo .v-menubar .v-icon, .runo .v-menubar-submenu .v-icon {
 	margin-right: 3px;
 }
 
-.runo .v-menubar:focus,.runo .v-menubar-popup:focus,.runo .v-menubar-popup .popupContent:focus,.runo .v-menubar-popup .popupContent .v-menubar-submenu:focus
-	{
+.runo .v-menubar:focus, .runo .v-menubar-popup:focus, .runo .v-menubar-popup .popupContent:focus, .runo .v-menubar-popup .popupContent .v-menubar-submenu:focus {
 	outline: none;
 }
 
@@ -2219,10 +2746,8 @@ body .runo.v-app .v-app-loading {
 	padding-left: 18px;
 }
 
-.runo .v-menubar-submenu .v-menubar-menuitem-checked .v-menubar-menuitem-caption
-	{
-	background: transparent url(../base/menubar/img/check.gif) no-repeat
-		left;
+.runo .v-menubar-submenu .v-menubar-menuitem-checked .v-menubar-menuitem-caption {
+	background: transparent url(../base/menubar/img/check.gif) no-repeat left;
 }
 
 .runo .v-Notification {
@@ -2232,10 +2757,11 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 	padding: 1em;
 	max-width: 85%;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
 }
 
-.runo .v-Notification h1,.runo .v-Notification p,.runo .v-Notification-error h1,.runo .v-Notification-error p,.runo .v-Notification-warning h1,.runo .v-Notification-warning p
-	{
+.runo .v-Notification-caption, .runo .v-Notification-description, .runo .v-Notification-details {
 	display: inline;
 	margin: 0 0.5em 0 0;
 }
@@ -2248,68 +2774,81 @@ body .runo.v-app .v-app-loading {
 	background: red;
 }
 
-.runo .v-Notification-tray h1 {
-	display: block;
-}
-
-.runo .v-Notification-tray p {
+.runo .v-Notification-tray .v-Notification-caption, .runo .v-Notification-tray .v-Notification-description {
 	display: block;
 }
 
 .runo .v-Notification-system {
 	background-color: red;
-	opacity: 0.7;
-	filter: alpha(opacity = 70);
 }
 
-.runo .v-Notification-system h1 {
+.runo .v-Notification-system .v-Notification-caption {
 	display: block;
 	margin: 0;
 }
 
-.runo .v-orderedlayout,.runo .v-horizontallayout,.runo .v-verticallayout
-	{
+.runo .v-Notification-animate-out {
+	-webkit-animation: v-notification-animate-out 400ms;
+	-moz-animation: v-notification-animate-out 400ms;
+	animation: v-notification-animate-out 400ms;
+}
+
+.runo .v-Notification.v-position-top {
+	top: 0;
+}
+
+.runo .v-Notification.v-position-right {
+	right: 0;
+}
+
+.runo .v-Notification.v-position-bottom {
+	bottom: 0;
+}
+
+.runo .v-Notification.v-position-left {
+	left: 0;
+}
+
+.runo .v-Notification.v-position-assistive {
+	top: -9999px;
+	left: -9999px;
+}
+
+.runo .v-orderedlayout, .runo .v-horizontallayout, .runo .v-verticallayout {
 	position: relative;
 }
 
-.runo .v-orderedlayout-margin-top,.runo .v-horizontallayout-margin-top,.runo .v-verticallayout-margin-top
-	{
+.runo .v-orderedlayout-margin-top, .runo .v-horizontallayout-margin-top, .runo .v-verticallayout-margin-top {
 	padding-top: 12px;
 }
 
-.runo .v-orderedlayout-margin-right,.runo .v-horizontallayout-margin-right,.runo .v-verticallayout-margin-right
-	{
+.runo .v-orderedlayout-margin-right, .runo .v-horizontallayout-margin-right, .runo .v-verticallayout-margin-right {
 	padding-right: 12px;
 }
 
-.runo .v-orderedlayout-margin-bottom,.runo .v-horizontallayout-margin-bottom,.runo .v-verticallayout-margin-bottom
-	{
+.runo .v-orderedlayout-margin-bottom, .runo .v-horizontallayout-margin-bottom, .runo .v-verticallayout-margin-bottom {
 	padding-bottom: 12px;
 }
 
-.runo .v-orderedlayout-margin-left,.runo .v-horizontallayout-margin-left,.runo .v-verticallayout-margin-left
-	{
+.runo .v-orderedlayout-margin-left, .runo .v-horizontallayout-margin-left, .runo .v-verticallayout-margin-left {
 	padding-left: 12px;
 }
 
-.runo .v-orderedlayout-spacing-on,.runo .v-horizontallayout-spacing-on,.runo .v-verticallayout-spacing-on
-	{
+.runo .v-orderedlayout-spacing-on, .runo .v-horizontallayout-spacing-on, .runo .v-verticallayout-spacing-on {
 	padding-top: 6px;
 	padding-left: 6px;
 }
 
-.runo .v-orderedlayout-spacing-off,.runo .v-horizontallayout-spacing-off,.runo .v-verticallayout-spacing-off
-	{
+.runo .v-orderedlayout-spacing-off, .runo .v-horizontallayout-spacing-off, .runo .v-verticallayout-spacing-off {
 	padding-top: 0;
 	padding-left: 0;
 }
 
-.runo .v-horizontallayout-slot,.runo .v-verticallayout-slot {
+.runo .v-horizontallayout-slot, .runo .v-verticallayout-slot {
 	position: absolute;
 }
 
-.runo .v-panel,.runo .v-panel-caption,.runo .v-panel-content,.runo .v-panel-deco,.runo .v-panel-light,.runo .v-panel-caption-light,.runo .v-panel-content-light,.runo .v-panel-deco-light
-	{
+.runo .v-panel, .runo .v-panel-caption, .runo .v-panel-content, .runo .v-panel-deco, .runo .v-panel-light, .runo .v-panel-caption-light, .runo .v-panel-content-light, .runo .v-panel-deco-light {
 	outline: none;
 	text-align: left;
 }
@@ -2344,11 +2883,11 @@ body .runo.v-app .v-app-loading {
 	box-sizing: border-box;
 }
 
-.runo .v-panel.v-has-width>.v-panel-content {
+.runo .v-panel.v-has-width > .v-panel-content {
 	width: 100%;
 }
 
-.runo .v-panel.v-has-height>.v-panel-content {
+.runo .v-panel.v-has-height > .v-panel-content {
 	height: 100%;
 }
 
@@ -2365,8 +2904,7 @@ body .runo.v-app .v-app-loading {
 .runo .v-popupview-loading {
 	width: 30px;
 	height: 30px;
-	background: transparent url(../base/common/img/ajax-loader-medium.gif)
-		no-repeat 50%;
+	background: transparent url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
 }
 
 .runo .v-progressbar {
@@ -2386,15 +2924,13 @@ body .runo.v-app .v-app-loading {
 .runo div.v-progressbar-indeterminate {
 	height: 20px;
 	width: 20px;
-	background: #fff url(../base/common/img/ajax-loader-medium.gif)
-		no-repeat 50%;
+	background: #fff url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 }
 
-.runo .v-progressbar-indeterminate .v-progressbar-wrapper,.runo .v-progressbar-indeterminate .v-progressbar-indicator,.runo .v-progressbar-indeterminate-disabled .v-progressbar-wrapper,.runo .v-progressbar-indeterminate-disabled .v-progressbar-indicator
-	{
+.runo .v-progressbar-indeterminate .v-progressbar-wrapper, .runo .v-progressbar-indeterminate .v-progressbar-indicator, .runo .v-progressbar-indeterminate-disabled .v-progressbar-wrapper, .runo .v-progressbar-indeterminate-disabled .v-progressbar-indicator {
 	display: none;
 }
 
@@ -2421,15 +2957,13 @@ body .runo.v-app .v-app-loading {
 .runo div.v-progressindicator-indeterminate {
 	height: 20px;
 	width: 20px;
-	background: #fff url(../base/common/img/ajax-loader-medium.gif)
-		no-repeat 50%;
+	background: #fff url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 }
 
-.runo .v-progressindicator-indeterminate .v-progressindicator-wrapper,.runo .v-progressindicator-indeterminate .v-progressindicator-indicator,.runo .v-progressindicator-indeterminate-disabled .v-progressindicator-wrapper,.runo .v-progressindicator-indeterminate-disabled .v-progressindicator-indicator
-	{
+.runo .v-progressindicator-indeterminate .v-progressindicator-wrapper, .runo .v-progressindicator-indeterminate .v-progressindicator-indicator, .runo .v-progressindicator-indeterminate-disabled .v-progressindicator-wrapper, .runo .v-progressindicator-indeterminate-disabled .v-progressindicator-indicator {
 	display: none;
 }
 
@@ -2520,8 +3054,7 @@ body .runo.v-app .v-app-loading {
 	float: left;
 }
 
-.runo.v-app .v-filterselect-input,.runo .v-window .v-filterselect-input,.runo .v-popupview-popup .v-filterselect-input
-	{
+.runo.v-app .v-filterselect-input, .runo .v-window .v-filterselect-input, .runo .v-popupview-popup .v-filterselect-input {
 	margin: 0;
 	float: left;
 	-webkit-border-radius: 0px;
@@ -2541,16 +3074,14 @@ body .runo.v-app .v-app-loading {
 	width: 1em;
 	margin-right: -1em;
 	height: 1em;
-	background: transparent url(../base/common/img/sprites.png) no-repeat
-		-5px -8px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat -5px -8px;
 }
 
 .runo .v-filterselect.v-readonly .v-filterselect-button {
 	display: none;
 }
 
-.runo .v-filterselect.v-readonly,.runo .v-filterselect.v-readonly .v-filterselect-input
-	{
+.runo .v-filterselect.v-readonly, .runo .v-filterselect.v-readonly .v-filterselect-input {
 	background: transparent;
 }
 
@@ -2563,10 +3094,29 @@ body .runo.v-app .v-app-loading {
 	border-collapse: collapse;
 	border: none;
 	vertical-align: top;
+	display: block;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+.runo .v-filterselect-suggestmenu table > tbody, .runo .v-filterselect-suggestmenu table > tbody > tr, .runo .v-filterselect-suggestmenu table > tbody > tr > td {
+	display: block;
+	width: 100%;
+	float: left;
+	clear: both;
+	overflow-y: hidden;
 }
 
 .runo .v-filterselect-suggestmenu .gwt-MenuItem {
 	white-space: nowrap;
+	padding-left: 1px;
+	padding-right: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
 }
 
 .runo .v-filterselect-suggestmenu .gwt-MenuItem .v-icon {
@@ -2583,8 +3133,7 @@ body .runo.v-app .v-app-loading {
 	color: #fff;
 }
 
-.runo .v-filterselect-nextpage,.runo .v-filterselect-nextpage-off,.runo .v-filterselect-prevpage-off,.runo .v-filterselect-prevpage
-	{
+.runo .v-filterselect-nextpage, .runo .v-filterselect-nextpage-off, .runo .v-filterselect-prevpage-off, .runo .v-filterselect-prevpage {
 	width: 100%;
 	background: #aaa;
 	text-align: center;
@@ -2592,15 +3141,14 @@ body .runo.v-app .v-app-loading {
 	cursor: pointer;
 }
 
-.runo .v-filterselect-nextpage-off,.runo .v-filterselect-prevpage-off {
+.runo .v-filterselect-nextpage-off, .runo .v-filterselect-prevpage-off {
 	color: #666;
 	opacity: 0.5;
-	filter: alpha(opacity = 50);
+	filter: alpha(opacity=50);
 	cursor: default;
 }
 
-.runo .v-filterselect-nextpage-off span,.runo .v-filterselect-prevpage-off span
-	{
+.runo .v-filterselect-nextpage-off span, .runo .v-filterselect-prevpage-off span {
 	cursor: default;
 }
 
@@ -2611,100 +3159,6 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-filterselect-no-input .v-filterselect-input {
 	cursor: default;
-}
-
-.runo .v-shadow {
-	position: absolute;
-}
-
-.runo .v-shadow .top-left {
-	position: absolute;
-	overflow: hidden;
-	top: -3px;
-	left: -5px;
-	width: 10px;
-	height: 10px;
-	background: transparent url(../base/shadow/img/top-left.png);
-}
-
-.runo .v-shadow .top {
-	position: absolute;
-	overflow: hidden;
-	top: -3px;
-	left: 5px;
-	height: 10px;
-	right: 5px;
-	background: transparent url(../base/shadow/img/top.png);
-}
-
-.runo .v-shadow .top-right {
-	position: absolute;
-	overflow: hidden;
-	top: -3px;
-	right: -5px;
-	width: 10px;
-	height: 10px;
-	background: transparent url(../base/shadow/img/top-right.png);
-}
-
-.runo .v-shadow .left {
-	position: absolute;
-	overflow: hidden;
-	top: 7px;
-	left: -5px;
-	width: 10px;
-	bottom: 3px;
-	background: transparent url(../base/shadow/img/left.png);
-}
-
-.runo .v-shadow .center {
-	position: absolute;
-	overflow: hidden;
-	top: 7px;
-	left: 5px;
-	bottom: 3px;
-	right: 5px;
-	background: transparent url(../base/shadow/img/center.png);
-}
-
-.runo .v-shadow .right {
-	position: absolute;
-	overflow: hidden;
-	top: 7px;
-	right: -5px;
-	width: 10px;
-	bottom: 3px;
-	background: transparent url(../base/shadow/img/right.png);
-}
-
-.runo .v-shadow .bottom-left {
-	position: absolute;
-	overflow: hidden;
-	bottom: -7px;
-	left: -5px;
-	width: 10px;
-	height: 10px;
-	background: transparent url(../base/shadow/img/bottom-left.png);
-}
-
-.runo .v-shadow .bottom {
-	position: absolute;
-	overflow: hidden;
-	bottom: -7px;
-	left: 5px;
-	right: 5px;
-	height: 10px;
-	background: transparent url(../base/shadow/img/bottom.png);
-}
-
-.runo .v-shadow .bottom-right {
-	position: absolute;
-	overflow: hidden;
-	bottom: -7px;
-	right: -5px;
-	width: 10px;
-	height: 10px;
-	background: transparent url(../base/shadow/img/bottom-right.png);
 }
 
 .runo .v-slider {
@@ -2725,6 +3179,8 @@ body .runo.v-app .v-app-loading {
 	height: 12px;
 	margin-top: -5px;
 	font-size: 0;
+	-ms-touch-action: none;
+	touch-action: none;
 }
 
 .runo .v-slider-vertical {
@@ -2764,7 +3220,7 @@ body .runo.v-app .v-app-loading {
 	text-shadow: 0 1px 0 #000;
 }
 
-.runo .v-splitpanel-horizontal,.runo .v-splitpanel-vertical {
+.runo .v-splitpanel-horizontal, .runo .v-splitpanel-vertical {
 	overflow: hidden;
 }
 
@@ -2780,6 +3236,8 @@ body .runo.v-app .v-app-loading {
 	background: #ddd;
 	cursor: e-resize;
 	cursor: col-resize;
+	-ms-touch-action: none;
+	touch-action: none;
 }
 
 .runo .v-disabled .v-splitpanel-hsplitter div {
@@ -2795,6 +3253,8 @@ body .runo.v-app .v-app-loading {
 	background: #ddd;
 	cursor: s-resize;
 	cursor: row-resize;
+	-ms-touch-action: none;
+	touch-action: none;
 }
 
 .runo .v-disabled .v-splitpanel-vsplitter div {
@@ -2813,7 +3273,7 @@ body .runo.v-app .v-app-loading {
 	background: #efefef;
 }
 
-.runo .v-table-header table,.runo .v-table-table {
+.runo .v-table-header table, .runo .v-table-table {
 	border-spacing: 0;
 	border-collapse: separate;
 	margin: 0;
@@ -2829,13 +3289,11 @@ body .runo.v-app .v-app-loading {
 	padding: 0;
 }
 
-.runo .v-table-header-cell,.runo .v-table-header-cell-asc,.runo .v-table-header-cell-desc
-	{
+.runo .v-table-header-cell, .runo .v-table-header-cell-asc, .runo .v-table-header-cell-desc {
 	cursor: pointer;
 }
 
-.runo .v-table.v-disabled .v-table-header-cell,.runo .v-table.v-disabled .v-table-header-cell-asc,.runo .v-table.v-disabled .v-table-header-cell-desc
-	{
+.runo .v-table.v-disabled .v-table-header-cell, .runo .v-table.v-disabled .v-table-header-cell-asc, .runo .v-table.v-disabled .v-table-header-cell-desc {
 	cursor: default;
 }
 
@@ -2901,21 +3359,18 @@ body .runo.v-app .v-app-loading {
 	float: right;
 }
 
-.runo .v-table-header-cell-asc .v-table-sort-indicator,.runo .v-table-header-cell-desc .v-table-sort-indicator
-	{
+.runo .v-table-header-cell-asc .v-table-sort-indicator, .runo .v-table-header-cell-desc .v-table-sort-indicator {
 	width: 16px;
 	height: 1.2em;
 	float: right;
 }
 
 .runo .v-table-header-cell-asc .v-table-sort-indicator {
-	background: transparent url(../base/common/img/sprites.png) no-repeat
-		right 6px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat right 6px;
 }
 
 .runo .v-table-header-cell-desc .v-table-sort-indicator {
-	background: transparent url(../base/common/img/sprites.png) no-repeat
-		right -10px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat right -10px;
 }
 
 .runo .v-table-caption-container-align-center {
@@ -2926,8 +3381,7 @@ body .runo.v-app .v-app-loading {
 	text-align: right;
 }
 
-.runo .v-table-caption-container .v-icon,.runo .v-table-header-drag .v-icon
-	{
+.runo .v-table-caption-container .v-icon, .runo .v-table-header-drag .v-icon {
 	vertical-align: middle;
 }
 
@@ -2940,7 +3394,7 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 }
 
-.runo .v-table-row,.runo .v-table-row-odd {
+.runo .v-table-row, .runo .v-table-row-odd {
 	background: #fff;
 	border: 0;
 	margin: 0;
@@ -2952,8 +3406,7 @@ body .runo.v-app .v-app-loading {
 	background: #efefef;
 }
 
-.runo .v-table-body-noselection .v-table-row,.runo .v-table-body-noselection .v-table-row-odd
-	{
+.runo .v-table-body-noselection .v-table-row, .runo .v-table-body-noselection .v-table-row-odd {
 	cursor: default;
 }
 
@@ -2984,8 +3437,7 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-table-column-selector {
 	float: right;
-	background: transparent url(../base/common/img/sprites.png) no-repeat
-		4px -37px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat 4px -37px;
 	margin: -1.2em 0 0 0;
 	height: 1.2em;
 	width: 14px;
@@ -3016,7 +3468,7 @@ body .runo.v-app .v-app-loading {
 	background: #efefef;
 	border: 1px solid #eee;
 	opacity: 0.9;
-	filter: alpha(opacity = 90);
+	filter: alpha(opacity=90);
 	margin-top: 20px;
 	z-index: 30000;
 }
@@ -3036,7 +3488,7 @@ body .runo.v-app .v-app-loading {
 	text-align: center;
 }
 
-.runo .v-table-body:focus,.runo .v-table-body-wrapper:focus {
+.runo .v-table-body:focus, .runo .v-table-body-wrapper:focus {
 	outline: none;
 }
 
@@ -3056,6 +3508,10 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-off {
 	color: #ddd;
+}
+
+.runo .v-table .v-checkbox {
+	display: inline-block;
 }
 
 .runo .v-table-drag .v-table-body {
@@ -3082,8 +3538,7 @@ body .runo.v-app .v-app-loading {
 	margin-bottom: -2px;
 }
 
-.runo .v-table-row-drag-top .v-table-cell-content:first-child:before,.runo .v-table-row-drag-bottom .v-table-cell-content:first-child:after
-	{
+.runo .v-table-row-drag-top .v-table-cell-content:first-child:before, .runo .v-table-row-drag-bottom .v-table-cell-content:first-child:after {
 	display: block;
 	position: absolute;
 	width: 6px;
@@ -3093,12 +3548,11 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(../base/common/img/drag-slot-dot.png);
 }
 
-.v-ff .runo .v-table-row-drag-bottom .v-table-cell-content:first-child:after,.v-ie .runo .v-table-row-drag-bottom .v-table-cell-content:first-child:after
-	{
+.v-ff .runo .v-table-row-drag-bottom .v-table-cell-content:first-child:after, .v-ie .runo .v-table-row-drag-bottom .v-table-cell-content:first-child:after {
 	margin-top: -2px;
 }
 
-.runo .v-tabsheet,.runo .v-tabsheet-content,.runo .v-tabsheet-deco {
+.runo .v-tabsheet, .runo .v-tabsheet-content, .runo .v-tabsheet-deco {
 	outline: none;
 	text-align: left;
 }
@@ -3117,7 +3571,7 @@ body .runo.v-app .v-app-loading {
 	outline: none;
 }
 
-.runo .v-tabsheet-tabitemcell,.runo .v-tabsheet-spacertd {
+.runo .v-tabsheet-tabitemcell, .runo .v-tabsheet-spacertd {
 	margin: 0;
 	padding: 0;
 	vertical-align: bottom;
@@ -3134,7 +3588,7 @@ body .runo.v-app .v-app-loading {
 	padding: 0.2em 0;
 }
 
-.runo .v-tabsheet-hidetabs>.v-tabsheet-tabcontainer {
+.runo .v-tabsheet-hidetabs > .v-tabsheet-tabcontainer {
 	display: none;
 }
 
@@ -3148,8 +3602,7 @@ body .runo.v-app .v-app-loading {
 	display: none;
 }
 
-.runo .v-tabsheet-scrollerPrev,.runo .v-tabsheet-scrollerNext,.runo .v-tabsheet-scrollerPrev-disabled,.runo .v-tabsheet-scrollerNext-disabled
-	{
+.runo .v-tabsheet-scrollerPrev, .runo .v-tabsheet-scrollerNext, .runo .v-tabsheet-scrollerPrev-disabled, .runo .v-tabsheet-scrollerNext-disabled {
 	border: 1px solid #aaa;
 	background: #fff;
 	width: 12px;
@@ -3157,14 +3610,12 @@ body .runo.v-app .v-app-loading {
 	cursor: pointer;
 }
 
-.runo .v-tabsheet-scrollerPrev-disabled,.runo .v-tabsheet-scrollerNext-disabled
-	{
+.runo .v-tabsheet-scrollerPrev-disabled, .runo .v-tabsheet-scrollerNext-disabled {
 	opacity: 0.5;
 	cursor: default;
 }
 
-.runo .v-tabsheet-tabs .v-caption,.runo .v-tabsheet-tabs .v-caption span
-	{
+.runo .v-tabsheet-tabs .v-caption, .runo .v-tabsheet-tabs .v-caption span {
 	white-space: nowrap;
 }
 
@@ -3205,8 +3656,7 @@ body .runo.v-app .v-app-loading {
 	cursor: inherit;
 }
 
-.runo .v-tabsheet.v-disabled .v-tabsheet-tabitem,.runo .v-tabsheet-tabitemcell-disabled .v-tabsheet-tabitem
-	{
+.runo .v-tabsheet.v-disabled .v-tabsheet-tabitem, .runo .v-tabsheet-tabitemcell-disabled .v-tabsheet-tabitem {
 	cursor: default;
 }
 
@@ -3217,6 +3667,14 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-tabsheet-tabitem-selected .v-caption {
 	cursor: default;
+}
+
+.runo .v-tabsheet-tabitem-focus .v-captiontext {
+	text-decoration: underline;
+}
+
+.runo .v-tabsheet-tabitem-selected.v-tabsheet-tabitem-focus .v-captiontext {
+	text-decoration: inherit;
 }
 
 .runo .v-tabsheet-content {
@@ -3249,27 +3707,26 @@ body .runo.v-app .v-app-loading {
 	white-space: pre-wrap;
 }
 
-.runo input.v-textfield-prompt,.runo textarea.v-textarea-prompt {
+.runo input.v-textfield-prompt, .runo textarea.v-textarea-prompt {
 	color: #999;
 	font-style: italic;
 }
 
-.runo input.v-textfield-readonly,.runo textarea.v-textarea-readonly {
+.runo input.v-textfield-readonly, .runo textarea.v-textarea-readonly {
 	background: transparent;
 	border: none;
 	resize: none;
 }
 
-.runo input.v-disabled,.runo textarea.v-disabled {
+.runo input.v-disabled, .runo textarea.v-disabled {
 	resize: none;
 }
 
-.runo input.v-textfield-readonly:focus,.runo textarea.v-textarea-readonly:focus
-	{
+.runo input.v-textfield-readonly:focus, .runo textarea.v-textarea-readonly:focus {
 	outline: none;
 }
 
-.v-sa .runo input:focus,.v-sa .runo textarea:focus {
+.v-sa .runo input:focus, .v-sa .runo textarea:focus {
 	outline-width: medium;
 }
 
@@ -3290,8 +3747,7 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-richtextarea .gwt-RichTextToolbar {
 	white-space: nowrap;
-	background: #959595 url(../base/textfield/img/richtext-toolbar-bg.png)
-		repeat-x 0 -42px;
+	background: #959595 url(../base/textfield/img/richtext-toolbar-bg.png) repeat-x 0 -42px;
 	border-bottom: 1px solid #7d7d7d;
 	padding: 2px;
 	overflow: hidden;
@@ -3309,22 +3765,19 @@ body .runo.v-app .v-app-loading {
 	white-space: nowrap;
 }
 
-.runo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton,.runo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton
-	{
+.runo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton, .runo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton {
 	float: left;
 	display: inline;
 	width: 22px;
 	height: 21px;
 	overflow: hidden;
-	background: transparent
-		url(../base/textfield/img/richtext-toolbar-bg.png) repeat-x;
+	background: transparent url(../base/textfield/img/richtext-toolbar-bg.png) repeat-x;
 	cursor: pointer;
 	margin-right: 2px;
 	text-align: center;
 }
 
-.runo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton-down,.runo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton-down,.runo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton-down-hovering,.runo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton-down-hovering
-	{
+.runo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton-down, .runo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton-down, .runo .v-richtextarea .gwt-RichTextToolbar .gwt-ToggleButton-down-hovering, .runo .v-richtextarea .gwt-RichTextToolbar .gwt-PushButton-down-hovering {
 	background-position: 0 -21px;
 }
 
@@ -3333,7 +3786,7 @@ body .runo.v-app .v-app-loading {
 	margin-right: 2px;
 }
 
-.runo .v-richtextarea-readonly {
+.runo .v-richtextarea.v-readonly {
 	border: none;
 }
 
@@ -3344,8 +3797,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-tree-node {
-	background: transparent url(../base/common/img/sprites.png) no-repeat
-		5px -37px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat 5px -37px;
 	padding: 1px 0;
 }
 
@@ -3358,8 +3810,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-tree-node-expanded {
-	background: transparent url(../base/common/img/sprites.png) no-repeat
-		-5px -10px;
+	background: transparent url(../base/common/img/sprites.png) no-repeat -5px -10px;
 }
 
 .runo .v-tree-node-caption {
@@ -3374,7 +3825,7 @@ body .runo.v-app .v-app-loading {
 	white-space: nowrap;
 }
 
-.runo .v-tree-node-caption span,.runo .v-tree-node-caption .v-icon {
+.runo .v-tree-node-caption span, .runo .v-tree-node-caption .v-icon {
 	vertical-align: middle;
 }
 
@@ -3399,8 +3850,7 @@ body .runo.v-app .v-app-loading {
 	padding-bottom: 0;
 }
 
-.runo .v-tree .v-tree-node-drag-top:before,.runo .v-tree .v-tree-node-drag-bottom:after,.runo .v-tree .v-tree-node-caption-drag-center:after
-	{
+.runo .v-tree .v-tree-node-drag-top:before, .runo .v-tree .v-tree-node-drag-bottom:after, .runo .v-tree .v-tree-node-caption-drag-center:after {
 	display: block;
 	position: absolute;
 	width: 6px;
@@ -3417,8 +3867,7 @@ body .runo.v-app .v-app-loading {
 	margin-left: 14px;
 }
 
-.v-ff .runo .v-tree .v-tree-node-caption-drag-center:after,.v-ie .runo .v-tree .v-tree-node-caption-drag-center:after
-	{
+.v-ff .runo .v-tree .v-tree-node-caption-drag-center:after, .v-ie .runo .v-tree .v-tree-node-caption-drag-center:after {
 	margin-top: -2px;
 }
 
@@ -3443,8 +3892,7 @@ body .runo.v-app .v-app-loading {
 	background-color: rgba(169, 209, 255, 0.6);
 }
 
-.runo .v-tree .v-tree-node-caption-drag-center div,.runo .v-tree .v-tree-node-drag-top,.runo .v-tree .v-tree-node-drag-bottom
-	{
+.runo .v-tree .v-tree-node-caption-drag-center div, .runo .v-tree .v-tree-node-drag-top, .runo .v-tree .v-tree-node-drag-bottom {
 	border-color: rgba(0, 109, 232, 0.6);
 }
 
@@ -3453,46 +3901,38 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-tree-connectors .v-tree-node {
-	background: transparent url(../base/tree/img/connector-expand.png)
-		no-repeat 2px -52px;
+	background: transparent url(../base/tree/img/connector-expand.png) no-repeat 2px -52px;
 }
 
 .runo .v-tree-connectors .v-tree-node-expanded {
-	background: transparent url(../base/tree/img/connector-collapse.png)
-		no-repeat 2px -52px;
+	background: transparent url(../base/tree/img/connector-collapse.png) no-repeat 2px -52px;
 }
 
 .runo .v-tree-connectors .v-tree-node-last {
-	background: transparent url(../base/tree/img/connector-expand-last.png)
-		no-repeat 2px -52px;
+	background: transparent url(../base/tree/img/connector-expand-last.png) no-repeat 2px -52px;
 }
 
 .runo .v-tree-connectors .v-tree-node-expanded.v-tree-node-last {
-	background: transparent
-		url(../base/tree/img/connector-collapse-last.png) no-repeat 2px -52px;
+	background: transparent url(../base/tree/img/connector-collapse-last.png) no-repeat 2px -52px;
 }
 
 .runo .v-tree-connectors .v-tree-node-leaf {
-	background: transparent url(../base/tree/img/connector-leaf.png)
-		repeat-y 2px 50%;
+	background: transparent url(../base/tree/img/connector-leaf.png) repeat-y 2px 50%;
 }
 
 .runo .v-tree-connectors .v-tree-node-leaf-last {
-	background: transparent url(../base/tree/img/connector-leaf-last.png)
-		repeat-y 2px 50%;
+	background: transparent url(../base/tree/img/connector-leaf-last.png) repeat-y 2px 50%;
 }
 
 .runo .v-tree-connectors .v-tree-node-children {
-	background: transparent url(../base/tree/img/connector.png) repeat-y 2px
-		0;
+	background: transparent url(../base/tree/img/connector.png) repeat-y 2px 0;
 }
 
 .runo .v-tree-connectors .v-tree-node-children-last {
 	background: transparent;
 }
 
-.runo .v-tree-connectors .v-tree-node-drag-top,.runo .v-tree-connectors .v-tree-node-expanded.v-tree-node-drag-top
-	{
+.runo .v-tree-connectors .v-tree-node-drag-top, .runo .v-tree-connectors .v-tree-node-expanded.v-tree-node-drag-top {
 	background-position: 2px -53px;
 }
 
@@ -3511,13 +3951,11 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-treetable-node-closed {
-	background: url(../base/treetable/img/arrow-right.png) right top
-		no-repeat;
+	background: url(../base/treetable/img/arrow-right.png) right top no-repeat;
 }
 
 .runo .v-treetable-node-open {
-	background: url(../base/treetable/img/arrow-down.png) right top
-		no-repeat;
+	background: url(../base/treetable/img/arrow-down.png) right top no-repeat;
 }
 
 .runo .v-treetable .v-checkbox {
@@ -3525,9 +3963,7 @@ body .runo.v-app .v-app-loading {
 	padding-bottom: 4px;
 }
 
-.runo .v-treetable .v-table-row .v-table-cell-content,.runo .v-treetable .v-table-row-odd .v-table-cell-content
-	{
-	position: relative;
+.runo .v-treetable .v-table-row .v-table-cell-content, .runo .v-treetable .v-table-row-odd .v-table-cell-content {
 	z-index: 10;
 }
 
@@ -3540,8 +3976,7 @@ body .runo.v-app .v-app-loading {
 	z-index: 1;
 }
 
-.runo .v-treetable .v-table-body .v-table-table .v-table-row-animating,.runo .v-treetable .v-table-body .v-table-table .v-table-row-animating .v-table-cell-content
-	{
+.runo .v-treetable .v-table-body .v-table-table .v-table-row-animating, .runo .v-treetable .v-table-body .v-table-table .v-table-row-animating .v-table-cell-content {
 	background: transparent;
 }
 
@@ -3556,13 +3991,11 @@ body .runo.v-app .v-app-loading {
 	background-color: #fff;
 }
 
-.runo div.v-treetable-animation-clone-wrapper table.v-treetable-animation-clone
-	{
+.runo div.v-treetable-animation-clone-wrapper table.v-treetable-animation-clone {
 	background-color: #fff;
 }
 
-.runo div table.v-treetable-animation-clone tr.v-table-row,.runo div table.v-treetable-animation-clone tr.v-table-row-odd,.runo div table.v-treetable-animation-clone tr.v-table-row td.v-table-cell-content,.runo div table.v-treetable-animation-clone tr.v-table-row-odd td.v-table-cell-content
-	{
+.runo div table.v-treetable-animation-clone tr.v-table-row, .runo div table.v-treetable-animation-clone tr.v-table-row-odd, .runo div table.v-treetable-animation-clone tr.v-table-row td.v-table-cell-content, .runo div table.v-treetable-animation-clone tr.v-table-row-odd td.v-table-cell-content {
 	visibility: visible;
 }
 
@@ -3576,14 +4009,18 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 }
 
-.v-ff .runo .v-upload-immediate,.v-op .runo .v-upload-immediate {
+.runo .v-upload-immediate .v-button {
+	width: 100%;
+}
+
+.v-ff .runo .v-upload-immediate, .v-op .runo .v-upload-immediate {
 	display: inline-block;
 }
 
 .runo .v-upload-immediate input {
 	opacity: 0;
-	filter: alpha(opacity = 0);
-	z-index: 2;
+	filter: alpha(opacity=0);
+	z-index: -1;
 	position: absolute;
 	right: 0;
 	height: 21px;
@@ -3610,13 +4047,11 @@ body .runo.v-app .v-app-loading {
 	box-sizing: border-box;
 }
 
-.runo .v-window.v-has-width>div.popupContent,.runo .v-window.v-has-width .v-window-wrap,.runo .v-window.v-has-width .v-window-contents,.runo .v-window.v-has-width .v-window-contents>div
-	{
+.runo .v-window.v-has-width > div.popupContent, .runo .v-window.v-has-width .v-window-wrap, .runo .v-window.v-has-width .v-window-contents, .runo .v-window.v-has-width .v-window-contents > div {
 	width: 100%;
 }
 
-.runo .v-window.v-has-height>div.popupContent,.runo .v-window.v-has-height .v-window-wrap,.runo .v-window.v-has-height .v-window-contents,.runo .v-window.v-has-height .v-window-contents>div
-	{
+.runo .v-window.v-has-height > div.popupContent, .runo .v-window.v-has-height .v-window-wrap, .runo .v-window.v-has-height .v-window-contents, .runo .v-window.v-has-height .v-window-contents > div {
 	height: 100%;
 }
 
@@ -3629,7 +4064,7 @@ body .runo.v-app .v-app-loading {
 	box-sizing: border-box;
 }
 
-.runo .v-window-outerheader,.runo .v-window-draggingCurtain {
+.runo .v-window-outerheader, .runo .v-window-draggingCurtain {
 	cursor: move;
 }
 
@@ -3653,7 +4088,7 @@ body .runo.v-app .v-app-loading {
 	vertical-align: middle;
 }
 
-.runo .v-window-contents>div {
+.runo .v-window-contents > div {
 	outline: none;
 }
 
@@ -3674,7 +4109,7 @@ body .runo.v-app .v-app-loading {
 	right: 0;
 }
 
-.runo .v-window-resizebox,.runo .v-window-resizingCurtain {
+.runo .v-window-resizebox, .runo .v-window-resizingCurtain {
 	cursor: se-resize;
 }
 
@@ -3682,14 +4117,12 @@ body .runo.v-app .v-app-loading {
 	height: 0;
 }
 
-.runo .v-window-resizebox-disabled,.runo .v-window-restorebox-disabled,.runo .v-window-maximizebox-disabled
-	{
+.runo .v-window-resizebox-disabled, .runo .v-window-closebox-disabled, .runo .v-window-restorebox-disabled, .runo .v-window-maximizebox-disabled {
 	cursor: default;
 	display: none;
 }
 
-.runo .v-window-closebox,.runo .v-window-restorebox,.runo .v-window-maximizebox
-	{
+.runo .v-window-closebox, .runo .v-window-restorebox, .runo .v-window-maximizebox {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -3699,7 +4132,7 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 }
 
-.runo .v-window-maximizebox,.runo .v-window-restorebox {
+.runo .v-window-maximizebox, .runo .v-window-restorebox {
 	right: 1.1em;
 }
 
@@ -3723,101 +4156,7 @@ body .runo.v-app .v-app-loading {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	filter: alpha(opacity = 50);
-}
-
-.runo .v-shadow-window {
-	position: absolute;
-}
-
-.runo .v-shadow-window .top-left {
-	position: absolute;
-	overflow: hidden;
-	top: -10px;
-	left: -15px;
-	width: 28px;
-	height: 28px;
-	background: transparent url(../base/window/img/shadow/top-left.png);
-}
-
-.runo .v-shadow-window .top {
-	position: absolute;
-	overflow: hidden;
-	top: -10px;
-	left: 13px;
-	height: 28px;
-	right: 13px;
-	background: transparent url(../base/window/img/shadow/top.png);
-}
-
-.runo .v-shadow-window .top-right {
-	position: absolute;
-	overflow: hidden;
-	top: -10px;
-	right: -15px;
-	width: 28px;
-	height: 28px;
-	background: transparent url(../base/window/img/shadow/top-right.png);
-}
-
-.runo .v-shadow-window .left {
-	position: absolute;
-	overflow: hidden;
-	top: 18px;
-	left: -15px;
-	width: 28px;
-	bottom: 10px;
-	background: transparent url(../base/window/img/shadow/left.png);
-}
-
-.runo .v-shadow-window .center {
-	position: absolute;
-	overflow: hidden;
-	top: 18px;
-	left: 13px;
-	bottom: 10px;
-	right: 13px;
-	background: transparent url(../base/window/img/shadow/center.png);
-}
-
-.runo .v-shadow-window .right {
-	position: absolute;
-	overflow: hidden;
-	top: 18px;
-	right: -15px;
-	width: 28px;
-	bottom: 10px;
-	background: transparent url(../base/window/img/shadow/right.png);
-}
-
-.runo .v-shadow-window .bottom-left {
-	position: absolute;
-	overflow: hidden;
-	bottom: -18px;
-	left: -15px;
-	width: 28px;
-	height: 28px;
-	background: transparent url(../base/window/img/shadow/bottom-left.png);
-}
-
-.runo .v-shadow-window .bottom {
-	position: absolute;
-	overflow: hidden;
-	bottom: -18px;
-	left: 13px;
-	right: 13px;
-	height: 28px;
-	background: transparent url(../base/window/img/shadow/bottom.png);
-}
-
-.runo .v-shadow-window .bottom-right {
-	position: absolute;
-	overflow: hidden;
-	bottom: -18px;
-	right: -15px;
-	width: 28px;
-	height: 28px;
-	background: transparent url(../base/window/img/shadow/bottom-right.png);
+	filter: alpha(opacity=50);
 }
 
 .runo .v-absolutelayout-wrapper {
@@ -3836,8 +4175,7 @@ body .runo.v-app .v-app-loading {
 .runo .v-accordion-item-caption .v-caption {
 	font-size: 15px;
 	padding: 7px 0 4px 31px;
-	background: transparent url(accordion/img/collapsed-icon.png) no-repeat
-		18px 55%;
+	background: transparent url(accordion/img/collapsed-icon.png) no-repeat 18px 55%;
 }
 
 .runo .v-accordion-item-open .v-accordion-item-caption {
@@ -3898,22 +4236,20 @@ body .runo.v-app .v-app-loading {
 	-moz-box-shadow: 0 0 2px #57a7ed;
 }
 
-.runo .v-button:active .v-button-wrap,.runo .v-button.v-pressed .v-button-wrap
-	{
+.runo .v-button:active .v-button-wrap, .runo .v-button.v-pressed .v-button-wrap {
 	background-position: 0 -79px;
 	background-color: #e7e9e9;
 	border-color: #b8bdbe;
 	border-top-color: #9da1a2;
 	border-bottom-color: #babfc0;
 	border-color: rgba(146, 151, 152, 0.9);
-	border-top-color: rgba(146, 151, 152, 1);
+	border-top-color: #929798;
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
 	text-shadow: none;
 }
 
-.runo .v-button .v-button-wrap,.runo .v-disabled.v-button .v-button-wrap
-	{
+.runo .v-button .v-button-wrap, .runo .v-disabled.v-button .v-button-wrap {
 	display: block;
 	font-size: 12px;
 	border: 1px solid #bdc1c2;
@@ -3938,16 +4274,14 @@ body .runo.v-app .v-app-loading {
 	text-overflow: ellipsis;
 }
 
-.runo .v-button-small .v-button-wrap,.runo .v-disabled.v-button-small .v-button-wrap
-	{
+.runo .v-button-small .v-button-wrap, .runo .v-disabled.v-button-small .v-button-wrap {
 	font-size: 11px;
 	line-height: 13px;
 	padding: 1px 12px;
 	min-height: 13px;
 }
 
-.runo .v-button-big .v-button-wrap,.runo .v-disabled.v-button-big .v-button-wrap
-	{
+.runo .v-button-big .v-button-wrap, .runo .v-disabled.v-button-big .v-button-wrap {
 	font-size: 15px;
 	line-height: 18px;
 	padding: 4px 18px;
@@ -3963,8 +4297,7 @@ body .runo.v-app .v-app-loading {
 	text-shadow: 0 -1px 0 #657883;
 }
 
-.runo .v-button-default:active .v-button-wrap,.runo .v-button-default.v-pressed .v-button-wrap
-	{
+.runo .v-button-default:active .v-button-wrap, .runo .v-button-default.v-pressed .v-button-wrap {
 	background-position: 0 -79px;
 	background-color: #8f9898;
 	border-color: #737e81;
@@ -3976,8 +4309,7 @@ body .runo.v-app .v-app-loading {
 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
 }
 
-.runo .v-button-default .v-button-wrap,.runo .v-disabled.v-button-default .v-button-wrap
-	{
+.runo .v-button-default .v-button-wrap, .runo .v-disabled.v-button-default .v-button-wrap {
 	border-color: #899395;
 	border-top-color: #a4abae;
 	border-bottom-color: #727b7d;
@@ -3989,12 +4321,11 @@ body .runo.v-app .v-app-loading {
 	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.22);
 }
 
-.runo .v-button-link,.runo .v-disabled.v-button-link {
+.runo .v-button-link, .runo .v-disabled.v-button-link {
 	padding: 0;
 }
 
-.runo .v-button-link .v-button-wrap,.runo .v-disabled.v-button-link .v-button-wrap,.runo .v-button-link:active .v-button-wrap,.runo .v-disabled.v-button-pressedv-button-link .v-button-wrap
-	{
+.runo .v-button-link .v-button-wrap, .runo .v-disabled.v-button-link .v-button-wrap, .runo .v-button-link:active .v-button-wrap, .runo .v-disabled.v-button-pressedv-button-link .v-button-wrap {
 	border: none;
 	background: transparent;
 	padding: 0;
@@ -4049,22 +4380,19 @@ body .runo.v-app .v-app-loading {
 
 .runo.v-app {
 	background: #e9eced url(common/img/main-bg.png) repeat-x;
-	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
-		"Lucida Sans", geneva, helvetica, arial, tahoma, verdana, sans-serif;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 13px;
 	line-height: 18px;
 }
 
-.runo.v-app,.runo .v-window,.runo .v-popupview-popup,.runo .v-tooltip,.runo.v-app input,.runo.v-app select,.runo.v-app button,.runo.v-app textarea,.runo .v-window input,.runo .v-window select,.runo .v-window button,.runo .v-window textarea,.runo .v-popupview-popup input,.runo .v-popupview-popup select,.runo .v-popupview-popup button,.runo .v-popupview-popup textarea,.runo .v-filterselect-suggestpopup,.runo .v-datefield-popup,.runo .v-contextmenu,.runo .v-Notification,.runo .v-menubar-submenu,.runo .v-drag-element
-	{
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+.runo.v-app, .runo .v-window, .runo .v-popupview-popup, .runo .v-tooltip, .runo.v-app input, .runo.v-app select, .runo.v-app button, .runo.v-app textarea, .runo .v-window input, .runo .v-window select, .runo .v-window button, .runo .v-window textarea, .runo .v-popupview-popup input, .runo .v-popupview-popup select, .runo .v-popupview-popup button, .runo .v-popupview-popup textarea, .runo .v-filterselect-suggestpopup, .runo .v-datefield-popup, .runo .v-contextmenu, .runo .v-Notification, .runo .v-menubar-submenu, .runo .v-drag-element {
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 13px;
 }
 
-.runo.v-app select,.runo .v-window select {
+.runo.v-app select, .runo .v-window select {
 	padding: 0;
 }
 
@@ -4110,8 +4438,7 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-contextmenu {
 	background: #e9eced url(tabsheet/img/tab-bg.png);
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	background-color: #f6f7f7;
 	color: #464f52;
 	font-size: 12px;
@@ -4147,8 +4474,7 @@ body .runo.v-app .v-app-loading {
 	height: 16px;
 }
 
-.runo .v-datefield input.v-textfield,.runo .v-datefield input.v-textfield[type=text]
-	{
+.runo .v-datefield input.v-textfield, .runo .v-datefield input.v-textfield[type=text] {
 	height: 22px;
 }
 
@@ -4160,8 +4486,7 @@ body .runo.v-app .v-app-loading {
 	padding: 0;
 	overflow: hidden;
 	border: none;
-	background: transparent url(datefield/img/open-button.png) no-repeat
-		right 0;
+	background: transparent url(datefield/img/open-button.png) no-repeat right 0;
 }
 
 .runo .v-datefield-popupcalendar {
@@ -4170,8 +4495,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-datefield-popup {
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 12px;
 	background: #f6f7f7;
@@ -4213,13 +4537,11 @@ body .runo.v-app .v-app-loading {
 	width: 150px;
 }
 
-.runo .v-datefield-calendarpanel-prevyear,.runo .v-datefield-calendarpanel-nextyear,.runo .v-datefield-calendarpanel-prevmonth,.runo .v-datefield-calendarpanel-nextmonth
-	{
+.runo .v-datefield-calendarpanel-prevyear, .runo .v-datefield-calendarpanel-nextyear, .runo .v-datefield-calendarpanel-prevmonth, .runo .v-datefield-calendarpanel-nextmonth {
 	width: 16px;
 }
 
-.runo .v-datefield-calendarpanel .v-button-prevyear,.runo .v-datefield-calendarpanel .v-button-nextyear
-	{
+.runo .v-datefield-calendarpanel .v-button-prevyear, .runo .v-datefield-calendarpanel .v-button-nextyear {
 	display: block;
 	width: 16px;
 	height: 16px;
@@ -4234,13 +4556,11 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(datefield/img/nextyear.png) no-repeat;
 }
 
-.runo .v-datefield-calendarpanel .v-button-prevyear:hover,.runo .v-datefield-calendarpanel .v-button-nextyear:hover
-	{
+.runo .v-datefield-calendarpanel .v-button-prevyear:hover, .runo .v-datefield-calendarpanel .v-button-nextyear:hover {
 	background-position: left bottom;
 }
 
-.runo .v-datefield-calendarpanel .v-button-prevmonth,.runo .v-datefield-calendarpanel .v-button-nextmonth
-	{
+.runo .v-datefield-calendarpanel .v-button-prevmonth, .runo .v-datefield-calendarpanel .v-button-nextmonth {
 	display: block;
 	width: 11px;
 	height: 16px;
@@ -4255,8 +4575,7 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(datefield/img/nextmonth.png) no-repeat;
 }
 
-.runo .v-datefield-calendarpanel .v-button-prevmonth:hover,.runo .v-datefield-calendarpanel .v-button-nextmonth:hover
-	{
+.runo .v-datefield-calendarpanel .v-button-prevmonth:hover, .runo .v-datefield-calendarpanel .v-button-nextmonth:hover {
 	background-position: left bottom;
 }
 
@@ -4267,8 +4586,7 @@ body .runo.v-app .v-app-loading {
 	font-size: 12px;
 }
 
-.runo .v-datefield-calendarpanel-day,.runo .v-datefield-calendarpanel-weeknumber,.runo .v-datefield-calendarpanel-day-today
-	{
+.runo .v-datefield-calendarpanel-day, .runo .v-datefield-calendarpanel-weeknumber, .runo .v-datefield-calendarpanel-day-today {
 	padding: 1px 3px;
 	width: 14px;
 	height: 16px;
@@ -4293,8 +4611,7 @@ body .runo.v-app .v-app-loading {
 	color: #dddddd;
 }
 
-.runo .v-datefield-calendarpanel-day-entry.v-datefield-calendarpanel-day-disabled
-	{
+.runo .v-datefield-calendarpanel-day-entry.v-datefield-calendarpanel-day-disabled {
 	color: #afd6f8;
 }
 
@@ -4304,8 +4621,7 @@ body .runo.v-app .v-app-loading {
 	height: 16px;
 	color: #fff;
 	padding: 1px 3px;
-	background: transparent url(datefield/img/selected-bg.png) no-repeat 50%
-		50%;
+	background: transparent url(datefield/img/selected-bg.png) no-repeat 50% 50%;
 	border: none;
 }
 
@@ -4328,8 +4644,7 @@ body .runo.v-app .v-app-loading {
 	font-style: normal;
 }
 
-.runo .v-inline-datefield input.v-textfield,.runo .v-inline-datefield input.v-textfield[type=text]
-	{
+.runo .v-inline-datefield input.v-textfield, .runo .v-inline-datefield input.v-textfield[type=text] {
 	height: 22px;
 }
 
@@ -4341,8 +4656,7 @@ body .runo.v-app .v-app-loading {
 	padding: 0;
 	overflow: hidden;
 	border: none;
-	background: transparent url(datefield/img/open-button.png) no-repeat
-		right 0;
+	background: transparent url(datefield/img/open-button.png) no-repeat right 0;
 }
 
 .runo .v-inline-datefield-popupcalendar {
@@ -4351,8 +4665,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-inline-datefield-popup {
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 12px;
 	background: #f6f7f7;
@@ -4394,13 +4707,11 @@ body .runo.v-app .v-app-loading {
 	width: 150px;
 }
 
-.runo .v-inline-datefield-calendarpanel-prevyear,.runo .v-inline-datefield-calendarpanel-nextyear,.runo .v-inline-datefield-calendarpanel-prevmonth,.runo .v-inline-datefield-calendarpanel-nextmonth
-	{
+.runo .v-inline-datefield-calendarpanel-prevyear, .runo .v-inline-datefield-calendarpanel-nextyear, .runo .v-inline-datefield-calendarpanel-prevmonth, .runo .v-inline-datefield-calendarpanel-nextmonth {
 	width: 16px;
 }
 
-.runo .v-inline-datefield-calendarpanel .v-button-prevyear,.runo .v-inline-datefield-calendarpanel .v-button-nextyear
-	{
+.runo .v-inline-datefield-calendarpanel .v-button-prevyear, .runo .v-inline-datefield-calendarpanel .v-button-nextyear {
 	display: block;
 	width: 16px;
 	height: 16px;
@@ -4415,13 +4726,11 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(datefield/img/nextyear.png) no-repeat;
 }
 
-.runo .v-inline-datefield-calendarpanel .v-button-prevyear:hover,.runo .v-inline-datefield-calendarpanel .v-button-nextyear:hover
-	{
+.runo .v-inline-datefield-calendarpanel .v-button-prevyear:hover, .runo .v-inline-datefield-calendarpanel .v-button-nextyear:hover {
 	background-position: left bottom;
 }
 
-.runo .v-inline-datefield-calendarpanel .v-button-prevmonth,.runo .v-inline-datefield-calendarpanel .v-button-nextmonth
-	{
+.runo .v-inline-datefield-calendarpanel .v-button-prevmonth, .runo .v-inline-datefield-calendarpanel .v-button-nextmonth {
 	display: block;
 	width: 11px;
 	height: 16px;
@@ -4436,8 +4745,7 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(datefield/img/nextmonth.png) no-repeat;
 }
 
-.runo .v-inline-datefield-calendarpanel .v-button-prevmonth:hover,.runo .v-inline-datefield-calendarpanel .v-button-nextmonth:hover
-	{
+.runo .v-inline-datefield-calendarpanel .v-button-prevmonth:hover, .runo .v-inline-datefield-calendarpanel .v-button-nextmonth:hover {
 	background-position: left bottom;
 }
 
@@ -4448,8 +4756,7 @@ body .runo.v-app .v-app-loading {
 	font-size: 12px;
 }
 
-.runo .v-inline-datefield-calendarpanel-day,.runo .v-inline-datefield-calendarpanel-weeknumber,.runo .v-inline-datefield-calendarpanel-day-today
-	{
+.runo .v-inline-datefield-calendarpanel-day, .runo .v-inline-datefield-calendarpanel-weeknumber, .runo .v-inline-datefield-calendarpanel-day-today {
 	padding: 1px 3px;
 	width: 14px;
 	height: 16px;
@@ -4474,8 +4781,7 @@ body .runo.v-app .v-app-loading {
 	color: #dddddd;
 }
 
-.runo .v-inline-datefield-calendarpanel-day-entry.v-inline-datefield-calendarpanel-day-disabled
-	{
+.runo .v-inline-datefield-calendarpanel-day-entry.v-inline-datefield-calendarpanel-day-disabled {
 	color: #afd6f8;
 }
 
@@ -4485,8 +4791,7 @@ body .runo.v-app .v-app-loading {
 	height: 16px;
 	color: #fff;
 	padding: 1px 3px;
-	background: transparent url(datefield/img/selected-bg.png) no-repeat 50%
-		50%;
+	background: transparent url(datefield/img/selected-bg.png) no-repeat 50% 50%;
 	border: none;
 }
 
@@ -4524,28 +4829,23 @@ body .runo.v-app .v-app-loading {
 	white-space: nowrap;
 }
 
-.runo .v-formlayout-spacing>tbody>.v-formlayout-row>.v-formlayout-captioncell,.runo .v-formlayout-spacing>tbody>.v-formlayout-row>.v-formlayout-contentcell,.runo .v-formlayout-spacing>tbody>.v-formlayout-row>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-captioncell, .runo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-contentcell, .runo .v-formlayout-spacing > tbody > .v-formlayout-row > .v-formlayout-errorcell {
 	padding-top: 8px;
 }
 
-.runo .v-formlayout-margin-top>tbody>.v-formlayout-firstrow>.v-formlayout-captioncell,.runo .v-formlayout-margin-top>tbody>.v-formlayout-firstrow>.v-formlayout-contentcell,.runo .v-formlayout-margin-top>tbody>.v-formlayout-firstrow>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-captioncell, .runo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-contentcell, .runo .v-formlayout-margin-top > tbody > .v-formlayout-firstrow > .v-formlayout-errorcell {
 	padding-top: 15px;
 }
 
-.runo .v-formlayout-margin-bottom>tbody>.v-formlayout-lastrow>.v-formlayout-captioncell,.runo .v-formlayout-margin-bottom>tbody>.v-formlayout-lastrow>.v-formlayout-contentcell,.runo .v-formlayout-margin-bottom>tbody>.v-formlayout-lastrow>.v-formlayout-errorcell
-	{
+.runo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-captioncell, .runo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-contentcell, .runo .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-errorcell {
 	padding-bottom: 15px;
 }
 
-.runo .v-formlayout-margin-left>tbody>.v-formlayout-row>.v-formlayout-captioncell
-	{
+.runo .v-formlayout-margin-left > tbody > .v-formlayout-row > .v-formlayout-captioncell {
 	padding-left: 18px;
 }
 
-.runo .v-formlayout-margin-right>tbody>.v-formlayout-row>.v-formlayout-contentcell
-	{
+.runo .v-formlayout-margin-right > tbody > .v-formlayout-row > .v-formlayout-contentcell {
 	padding-right: 18px;
 }
 
@@ -4598,12 +4898,11 @@ body .runo.v-app .v-app-loading {
 	padding-top: 8px;
 }
 
-.runo .v-label h1,.runo .v-label h2,.runo .v-label h3,.runo .v-label h4,.runo .v-label h5,.runo .v-label h6
-	{
+.runo .v-label h1, .runo .v-label h2, .runo .v-label h3, .runo .v-label h4, .runo .v-label h5, .runo .v-label h6 {
 	color: #404749;
 }
 
-.runo .v-label-h1,.runo .v-label h1 {
+.runo .v-label-h1, .runo .v-label h1 {
 	margin: 0;
 	padding: 8px 0 4px;
 	font-size: 24px;
@@ -4613,7 +4912,7 @@ body .runo.v-app .v-app-loading {
 	text-shadow: 0 1px 1px #fff;
 }
 
-.runo .v-label-h2,.runo .v-label h2 {
+.runo .v-label-h2, .runo .v-label h2 {
 	color: #f14c1a;
 	font-size: 18px;
 	letter-spacing: -0.03em;
@@ -4621,14 +4920,14 @@ body .runo.v-app .v-app-loading {
 	padding: 13px 0 5px;
 }
 
-.runo .v-label-h3,.runo .v-label h3 {
+.runo .v-label-h3, .runo .v-label h3 {
 	font-size: 15px;
 	letter-spacing: -0.03em;
 	font-weight: normal;
 	text-shadow: 0 1px 1px #fff;
 }
 
-.runo .v-label-h4,.runo .v-label h4 {
+.runo .v-label-h4, .runo .v-label h4 {
 	font-size: 13px;
 	font-weight: normal;
 	text-shadow: 0 1px 1px #fff;
@@ -4642,7 +4941,7 @@ body .runo.v-app .v-app-loading {
 	color: #707679;
 }
 
-.runo .v-label hr,.runo .v-label-hr {
+.runo .v-label hr, .runo .v-label-hr {
 	height: 2px;
 	overflow: hidden;
 	background: #ccd2d3;
@@ -4656,7 +4955,7 @@ body .runo.v-app .v-app-loading {
 	height: 1px;
 }
 
-.v-sa .runo .v-label hr,.v-ie8 .runo .v-label hr {
+.v-sa .runo .v-label hr, .v-ie8 .runo .v-label hr {
 	height: 1px;
 }
 
@@ -4684,8 +4983,7 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-menubar-submenu {
 	background: #e9eced url(tabsheet/img/tab-bg.png);
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 12px;
 	line-height: 14px;
@@ -4711,8 +5009,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-Notification {
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	background-color: #94a0a3;
 	color: #ffffff;
 	padding: 20px 45px;
@@ -4727,8 +5024,7 @@ body .runo.v-app .v-app-loading {
 	margin: 10px;
 }
 
-.runo .v-Notification h1,.runo .v-Notification p,.runo .v-Notification-error h1,.runo .v-Notification-error p,.runo .v-Notification-warning h1,.runo .v-Notification-warning p
-	{
+.runo .v-Notification h1, .runo .v-Notification p, .runo .v-Notification-error h1, .runo .v-Notification-error p, .runo .v-Notification-warning h1, .runo .v-Notification-warning p {
 	display: inline;
 	font-weight: normal;
 	line-height: normal;
@@ -4743,8 +5039,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-Notification-error {
-	background: #f13d13 url(notification/img/close-error.png) no-repeat
-		right 5px;
+	background: #f13d13 url(notification/img/close-error.png) no-repeat right 5px;
 	padding-right: 50px;
 }
 
@@ -4783,28 +5078,23 @@ body .runo.v-app .v-app-loading {
 	padding: 14px 32px;
 }
 
-.runo .v-orderedlayout-margin-top,.runo .v-horizontallayout-margin-top,.runo .v-verticallayout-margin-top,.runo .v-csslayout-margin-top,.runo .v-layout.v-margin-top
-	{
+.runo .v-orderedlayout-margin-top, .runo .v-horizontallayout-margin-top, .runo .v-verticallayout-margin-top, .runo .v-csslayout-margin-top, .runo .v-layout.v-margin-top {
 	padding-top: 15px;
 }
 
-.runo .v-orderedlayout-margin-right,.runo .v-horizontallayout-margin-right,.runo .v-verticallayout-margin-right,.runo .v-csslayout-margin-right,.runo .v-layout.v-margin-right
-	{
+.runo .v-orderedlayout-margin-right, .runo .v-horizontallayout-margin-right, .runo .v-verticallayout-margin-right, .runo .v-csslayout-margin-right, .runo .v-layout.v-margin-right {
 	padding-right: 18px;
 }
 
-.runo .v-orderedlayout-margin-bottom,.runo .v-horizontallayout-margin-bottom,.runo .v-verticallayout-margin-bottom,.runo .v-csslayout-margin-bottom,.runo .v-layout.v-margin-bottom
-	{
+.runo .v-orderedlayout-margin-bottom, .runo .v-horizontallayout-margin-bottom, .runo .v-verticallayout-margin-bottom, .runo .v-csslayout-margin-bottom, .runo .v-layout.v-margin-bottom {
 	padding-bottom: 15px;
 }
 
-.runo .v-orderedlayout-margin-left,.runo .v-horizontallayout-margin-left,.runo .v-verticallayout-margin-left,.runo .v-csslayout-margin-left,.runo .v-layout.v-margin-left
-	{
+.runo .v-orderedlayout-margin-left, .runo .v-horizontallayout-margin-left, .runo .v-verticallayout-margin-left, .runo .v-csslayout-margin-left, .runo .v-layout.v-margin-left {
 	padding-left: 18px;
 }
 
-.runo .v-orderedlayout-spacing-on,.runo .v-horizontallayout-spacing-on,.runo .v-verticallayout-spacing-on
-	{
+.runo .v-orderedlayout-spacing-on, .runo .v-horizontallayout-spacing-on, .runo .v-verticallayout-spacing-on {
 	padding-top: 8px;
 	padding-left: 8px;
 }
@@ -4814,17 +5104,15 @@ body .runo.v-app .v-app-loading {
 	height: 8px;
 }
 
-.runo .v-verticallayout-darker,.runo .v-horizontallayout-darker,.runo .v-gridlayout-darker,.runo .v-formlayout-darker,.runo .v-absolutelayout-darker,.runo .v-csslayout-darker
-	{
+.runo .v-verticallayout-darker, .runo .v-horizontallayout-darker, .runo .v-gridlayout-darker, .runo .v-formlayout-darker, .runo .v-absolutelayout-darker, .runo .v-csslayout-darker {
 	background-color: #f3f4f5;
 }
 
-.runo .v-csslayout-selectable *,.runo .v-csslayout-selectable-selected *
-	{
+.runo .v-csslayout-selectable *, .runo .v-csslayout-selectable-selected * {
 	cursor: pointer;
 }
 
-.runo .v-csslayout-selectable,.runo .v-csslayout-selectable-selected {
+.runo .v-csslayout-selectable, .runo .v-csslayout-selectable-selected {
 	padding: 10px;
 	cursor: pointer;
 }
@@ -4840,12 +5128,11 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo div.v-csslayout-box-shadow {
-	background: transparent url(shadow/img/bottom-right.png) no-repeat right
-		bottom;
+	background: transparent url(shadow/img/bottom-right.png) no-repeat right bottom;
 	overflow: hidden;
 }
 
-.runo .v-csslayout-box-shadow>.v-csslayout-margin {
+.runo .v-csslayout-box-shadow > .v-csslayout-margin {
 	padding: 0 8px 0 0;
 	background: transparent url(shadow/img/right.png) repeat-y right;
 	margin: 0;
@@ -4853,8 +5140,7 @@ body .runo.v-app .v-app-loading {
 	bottom: 8px;
 }
 
-.runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container
-	{
+.runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container {
 	padding: 0 0 8px 0;
 	margin-left: 6px;
 	background: transparent url(shadow/img/bottom.png) repeat-x bottom;
@@ -4862,13 +5148,11 @@ body .runo.v-app .v-app-loading {
 	top: 8px;
 }
 
-.runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container>*
-	{
+.runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container > * {
 	margin-left: -6px;
 }
 
-.v-webkit .runo .v-csslayout-box-shadow,.v-webkit .runo .v-csslayout-box-shadow>.v-csslayout-margin,.v-webkit .runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container,.v-gecko .runo .v-csslayout-box-shadow,.v-gecko .runo .v-csslayout-box-shadow>.v-csslayout-margin,.v-gecko .runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container,.v-gecko .runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container>*
-	{
+.v-webkit .runo .v-csslayout-box-shadow, .v-webkit .runo .v-csslayout-box-shadow > .v-csslayout-margin, .v-webkit .runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container, .v-gecko .runo .v-csslayout-box-shadow, .v-gecko .runo .v-csslayout-box-shadow > .v-csslayout-margin, .v-gecko .runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container, .v-gecko .runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container > * {
 	background: transparent;
 	padding: 0;
 	margin: 0;
@@ -4876,18 +5160,15 @@ body .runo.v-app .v-app-loading {
 	position: static;
 }
 
-.v-webkit .runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container>*,.v-gecko .runo .v-csslayout-box-shadow>.v-csslayout-margin>.v-csslayout-container>*
-	{
+.v-webkit .runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container > *, .v-gecko .runo .v-csslayout-box-shadow > .v-csslayout-margin > .v-csslayout-container > * {
 	margin-left: 0;
 }
 
-.v-webkit .runo .v-csslayout-box-shadow,.v-gecko .runo .v-csslayout-box-shadow
-	{
+.v-webkit .runo .v-csslayout-box-shadow, .v-gecko .runo .v-csslayout-box-shadow {
 	padding: 4px 8px 10px;
 }
 
-.v-webkit .runo .v-csslayout-box-shadow>.v-csslayout-margin,.v-gecko .runo .v-csslayout-box-shadow>.v-csslayout-margin
-	{
+.v-webkit .runo .v-csslayout-box-shadow > .v-csslayout-margin, .v-gecko .runo .v-csslayout-box-shadow > .v-csslayout-margin {
 	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -4901,7 +5182,7 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(icons/16/error.png) no-repeat bottom center;
 }
 
-.runo .v-panel-caption,.runo .v-panel-caption-light {
+.runo .v-panel-caption, .runo .v-panel-caption-light {
 	font-size: 18px;
 	line-height: normal;
 	font-weight: normal;
@@ -4928,8 +5209,7 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-panel-deco {
 	height: 9px;
-	background: transparent url(panel/img/bottom-right.png) repeat-x right
-		top;
+	background: transparent url(panel/img/bottom-right.png) repeat-x right top;
 	margin-left: 9px;
 }
 
@@ -4942,7 +5222,7 @@ body .runo.v-app .v-app-loading {
 	background: transparent url(panel/img/bottom-left.png) no-repeat;
 }
 
-.runo .v-panel-light,.runo .v-panel-caption-light {
+.runo .v-panel-light, .runo .v-panel-caption-light {
 	background: transparent;
 }
 
@@ -5011,8 +5291,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-progressbar-indeterminate {
-	background: #fff url(../base/common/img/ajax-loader-medium.gif)
-		no-repeat 50%;
+	background: #fff url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
 }
 
 .runo .v-progressbar-indeterminate-disabled {
@@ -5037,8 +5316,7 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-progressindicator-indeterminate {
-	background: #fff url(../base/common/img/ajax-loader-medium.gif)
-		no-repeat 50%;
+	background: #fff url(../base/common/img/ajax-loader-medium.gif) no-repeat 50%;
 }
 
 .runo .v-progressindicator-indeterminate-disabled {
@@ -5049,7 +5327,7 @@ body .runo.v-app .v-app-loading {
 	font-size: 13px;
 }
 
-.runo .v-select-twincol-options,.runo .v-select-twincol-selections {
+.runo .v-select-twincol-options, .runo .v-select-twincol-selections {
 	font-size: 13px;
 }
 
@@ -5064,10 +5342,8 @@ body .runo.v-app .v-app-loading {
 	padding-right: 25px;
 }
 
-.runo.v-app .v-filterselect .v-filterselect-input,.runo .v-window .v-filterselect .v-filterselect-input,.runo .v-popupview-popup .v-filterselect .v-filterselect-input
-	{
-	background: transparent url(select/img/bg-center-filter.png) no-repeat
-		1px 0;
+.runo.v-app .v-filterselect .v-filterselect-input, .runo .v-window .v-filterselect .v-filterselect-input, .runo .v-popupview-popup .v-filterselect .v-filterselect-input {
+	background: transparent url(select/img/bg-center-filter.png) no-repeat 1px 0;
 	border: none;
 	height: 23px;
 	margin: 0;
@@ -5104,8 +5380,7 @@ body .runo.v-app .v-app-loading {
 	background-position: bottom left;
 }
 
-.runo .v-disabled .v-filterselect-button:hover,.runo .v-readonly .v-filterselect-button:hover
-	{
+.runo .v-disabled .v-filterselect-button:hover, .runo .v-readonly .v-filterselect-button:hover {
 	background-position: top left;
 }
 
@@ -5116,8 +5391,7 @@ body .runo.v-app .v-app-loading {
 .runo .v-filterselect-suggestpopup {
 	background: #f6f7f7;
 	border: 1px solid #b6bbbc;
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 12px;
 	line-height: 18px;
@@ -5139,15 +5413,14 @@ body .runo.v-app .v-app-loading {
 	color: #fff;
 }
 
-.runo .v-filterselect-nextpage,.runo .v-filterselect-nextpage-off,.runo .v-filterselect-prevpage-off,.runo .v-filterselect-prevpage
-	{
+.runo .v-filterselect-nextpage, .runo .v-filterselect-nextpage-off, .runo .v-filterselect-prevpage-off, .runo .v-filterselect-prevpage {
 	height: 11px;
 	width: 100%;
 	background: transparent url(select/img/button-bg.png) no-repeat 50% 0;
 	margin: 2px 0 0 0;
 }
 
-.runo .v-filterselect-prevpage,.runo .v-filterselect-prevpage-off {
+.runo .v-filterselect-prevpage, .runo .v-filterselect-prevpage-off {
 	background-position: 50% -1px;
 	margin: 0 0 2px 0;
 }
@@ -5160,8 +5433,7 @@ body .runo.v-app .v-app-loading {
 	background-position: 50% -12px;
 }
 
-.runo .v-filterselect-nextpage span,.runo .v-filterselect-nextpage-off span,.runo .v-filterselect-prevpage-off span,.runo .v-filterselect-prevpage span
-	{
+.runo .v-filterselect-nextpage span, .runo .v-filterselect-nextpage-off span, .runo .v-filterselect-prevpage-off span, .runo .v-filterselect-prevpage span {
 	display: block;
 	height: 12px;
 	width: 100%;
@@ -5171,8 +5443,7 @@ body .runo.v-app .v-app-loading {
 	overflow: hidden;
 }
 
-.runo .v-filterselect-nextpage span,.runo .v-filterselect-nextpage-off span
-	{
+.runo .v-filterselect-nextpage span, .runo .v-filterselect-nextpage-off span {
 	background: transparent url(select/img/arrow-down.png) no-repeat 50% 60%;
 }
 
@@ -5305,8 +5576,7 @@ body .runo.v-app .v-app-loading {
 	background-position: left bottom;
 }
 
-.runo .v-slider-scrollbar .v-slider-handle,.runo .v-slider-scrollbar.v-slider-vertical .v-slider-handle
-	{
+.runo .v-slider-scrollbar .v-slider-handle, .runo .v-slider-scrollbar.v-slider-vertical .v-slider-handle {
 	background: #ffffff;
 	border: 1px solid #cccfd0;
 	border-radius: 6px;
@@ -5342,16 +5612,15 @@ body .runo.v-app .v-app-loading {
 	background-position: left bottom;
 }
 
-.runo .v-splitpanel-horizontal,.runo .v-splitpanel-vertical {
+.runo .v-splitpanel-horizontal, .runo .v-splitpanel-vertical {
 	overflow: hidden;
 }
 
-.runo .v-splitpanel-hsplitter,.runo .v-splitpanel-hsplitter-locked {
+.runo .v-splitpanel-hsplitter, .runo .v-splitpanel-hsplitter-locked {
 	width: 6px;
 }
 
-.runo .v-splitpanel-hsplitter div,.runo .v-splitpanel-hsplitter-locked div
-	{
+.runo .v-splitpanel-hsplitter div, .runo .v-splitpanel-hsplitter-locked div {
 	width: 6px;
 	position: absolute;
 	top: 0;
@@ -5361,61 +5630,52 @@ body .runo.v-app .v-app-loading {
 	margin: 0 -1px;
 }
 
-.runo .v-splitpanel-vsplitter,.runo .v-splitpanel-vsplitter-locked {
+.runo .v-splitpanel-vsplitter, .runo .v-splitpanel-vsplitter-locked {
 	height: 6px;
 }
 
-.runo .v-splitpanel-vsplitter div,.runo .v-splitpanel-vsplitter-locked div
-	{
+.runo .v-splitpanel-vsplitter div, .runo .v-splitpanel-vsplitter-locked div {
 	height: 6px;
 	background: #ccd2d0 url(splitpanel/img/bg_ver.png);
 	border: 1px solid #b6bbbc;
 	margin: -1px 0;
 }
 
-.runo .v-splitpanel-hsplitter-rounded div,.runo .v-splitpanel-vsplitter-rounded div,.runo .v-splitpanel-hsplitter-rounded-locked div,.runo .v-splitpanel-vsplitter-rounded-locked div
-	{
+.runo .v-splitpanel-hsplitter-rounded div, .runo .v-splitpanel-vsplitter-rounded div, .runo .v-splitpanel-hsplitter-rounded-locked div, .runo .v-splitpanel-vsplitter-rounded-locked div {
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 
-.runo .v-splitpanel-hsplitter-rounded div,.runo .v-splitpanel-hsplitter-rounded-locked div
-	{
+.runo .v-splitpanel-hsplitter-rounded div, .runo .v-splitpanel-hsplitter-rounded-locked div {
 	top: 4px;
 	bottom: 4px;
 }
 
-.runo .v-splitpanel-vsplitter-rounded div,.runo .v-splitpanel-vsplitter-rounded-locked div
-	{
+.runo .v-splitpanel-vsplitter-rounded div, .runo .v-splitpanel-vsplitter-rounded-locked div {
 	margin: -1px 4px;
 }
 
-.runo .v-splitpanel-hsplitter-small,.runo .v-splitpanel-vsplitter-small,.runo .v-splitpanel-hsplitter-small-locked,.runo .v-splitpanel-vsplitter-small-locked
-	{
+.runo .v-splitpanel-hsplitter-small, .runo .v-splitpanel-vsplitter-small, .runo .v-splitpanel-hsplitter-small-locked, .runo .v-splitpanel-vsplitter-small-locked {
 	background: #b6bbbc;
 }
 
-.runo .v-splitpanel-hsplitter-small,.runo .v-splitpanel-hsplitter-small-locked
-	{
+.runo .v-splitpanel-hsplitter-small, .runo .v-splitpanel-hsplitter-small-locked {
 	width: 1px;
 }
 
-.runo .v-splitpanel-vsplitter-small,.runo .v-splitpanel-vsplitter-small-locked
-	{
+.runo .v-splitpanel-vsplitter-small, .runo .v-splitpanel-vsplitter-small-locked {
 	height: 1px;
 }
 
-.runo .v-splitpanel-hsplitter-small div,.runo .v-splitpanel-hsplitter-small-locked div
-	{
+.runo .v-splitpanel-hsplitter-small div, .runo .v-splitpanel-hsplitter-small-locked div {
 	border: none;
 	background: transparent;
 	width: 5px;
 	margin: 0 0 0 -2px;
 }
 
-.runo .v-splitpanel-vsplitter-small div,.runo .v-splitpanel-vsplitter-small-locked div
-	{
+.runo .v-splitpanel-vsplitter-small div, .runo .v-splitpanel-vsplitter-small-locked div {
 	border: none;
 	background: transparent;
 	height: 5px;
@@ -5475,8 +5735,7 @@ body .runo.v-app .v-app-loading {
 	height: 36px;
 }
 
-.runo .v-table-header-cell:hover,.runo .v-table-header-cell-asc:hover,.runo .v-table-header-cell-desc:hover
-	{
+.runo .v-table-header-cell:hover, .runo .v-table-header-cell-asc:hover, .runo .v-table-header-cell-desc:hover {
 	background: transparent url(table/img/header-bg-over.png) repeat-x;
 }
 
@@ -5485,16 +5744,15 @@ body .runo.v-app .v-app-loading {
 	border: 1px solid #b6bbbc;
 }
 
-.runo tr.v-table-row:hover,.runo tr.v-table-row-odd:hover {
+.runo tr.v-table-row:hover, .runo tr.v-table-row-odd:hover {
 	background-color: #edeeee;
 }
 
-.runo .v-table-row,.runo .v-table-body-noselection .v-table-row:hover {
+.runo .v-table-row, .runo .v-table-body-noselection .v-table-row:hover {
 	background-color: #fff;
 }
 
-.runo .v-table-row-odd,.runo .v-table-body-noselection .v-table-row-odd:hover
-	{
+.runo .v-table-row-odd, .runo .v-table-body-noselection .v-table-row-odd:hover {
 	background-color: #f6f7f7;
 }
 
@@ -5523,13 +5781,11 @@ body .runo.v-app .v-app-loading {
 	padding: 3px 0 0 0;
 }
 
-.runo .v-table-cell-content .v-textfield,.runo .v-table-cell-content .v-button
-	{
+.runo .v-table-cell-content .v-textfield, .runo .v-table-cell-content .v-button {
 	margin: -3px 0 0 0;
 }
 
-.runo .v-table-cell-content .v-textfield,.runo .v-table-cell-content .v-datefield
-	{
+.runo .v-table-cell-content .v-textfield, .runo .v-table-cell-content .v-datefield {
 	width: 97%;
 }
 
@@ -5564,8 +5820,7 @@ body .runo.v-app .v-app-loading {
 	background: #e7edf3 url(table/img/header-bg.png) repeat-x;
 	border: 1px solid #b6bbbc;
 	padding: 4px;
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 15px;
 	margin-top: 20px;
@@ -5582,8 +5837,7 @@ body .runo.v-app .v-app-loading {
 	display: block;
 	margin-top: 8px;
 	text-align: center;
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	color: #464f52;
 	font-size: 15px;
 	text-shadow: #ffffff 2px 2px 0;
@@ -5602,8 +5856,7 @@ body .runo.v-app .v-app-loading {
 	display: inline;
 }
 
-.runo .v-table-borderless .v-table-header-wrap,.runo .v-table-borderless .v-table-body
-	{
+.runo .v-table-borderless .v-table-header-wrap, .runo .v-table-borderless .v-table-body {
 	border: none;
 }
 
@@ -5615,18 +5868,15 @@ body .runo.v-app .v-app-loading {
 	background: transparent;
 }
 
-.runo .v-table-borderless .v-table-row,.runo .v-table-borderless .v-table-row-odd,.runo .v-table-borderless .v-table-body-noselection .v-table-row:hover,.runo .v-table-borderless .v-table-body-noselection .v-table-row-odd:hover
-	{
+.runo .v-table-borderless .v-table-row, .runo .v-table-borderless .v-table-row-odd, .runo .v-table-borderless .v-table-body-noselection .v-table-row:hover, .runo .v-table-borderless .v-table-body-noselection .v-table-row-odd:hover {
 	background-color: transparent;
 }
 
-.runo .v-table-small .v-table-header-wrap,.runo .v-table-small .v-table-header
-	{
+.runo .v-table-small .v-table-header-wrap, .runo .v-table-small .v-table-header {
 	height: 22px;
 }
 
-.runo .v-table-small .v-table-sort-indicator,.runo .v-table-small .v-table-header-cell-asc .v-table-sort-indicator,.runo .v-table-small .v-table-header-cell-desc .v-table-sort-indicator
-	{
+.runo .v-table-small .v-table-sort-indicator, .runo .v-table-small .v-table-header-cell-asc .v-table-sort-indicator, .runo .v-table-small .v-table-header-cell-desc .v-table-sort-indicator {
 	height: 22px;
 }
 
@@ -5666,8 +5916,7 @@ body .runo.v-app .v-app-loading {
 	float: right;
 }
 
-.runo .v-tabsheet-scrollerPrev,.runo .v-tabsheet-scrollerNext,.runo .v-tabsheet-scrollerPrev-disabled,.runo .v-tabsheet-scrollerNext-disabled
-	{
+.runo .v-tabsheet-scrollerPrev, .runo .v-tabsheet-scrollerNext, .runo .v-tabsheet-scrollerPrev-disabled, .runo .v-tabsheet-scrollerNext-disabled {
 	border: none;
 	width: 12px;
 	padding: 0;
@@ -5676,26 +5925,23 @@ body .runo.v-app .v-app-loading {
 	margin-top: -1px;
 }
 
-.runo .v-tabsheet-scrollerNext,.runo .v-tabsheet-scrollerNext-disabled {
+.runo .v-tabsheet-scrollerNext, .runo .v-tabsheet-scrollerNext-disabled {
 	background: transparent url(tabsheet/img/next.png) no-repeat;
 }
 
-.runo .v-tabsheet-scrollerPrev,.runo .v-tabsheet-scrollerPrev-disabled {
+.runo .v-tabsheet-scrollerPrev, .runo .v-tabsheet-scrollerPrev-disabled {
 	background: transparent url(tabsheet/img/prev.png) no-repeat;
 }
 
-.runo .v-tabsheet-scrollerPrev:hover,.runo .v-tabsheet-scrollerNext:hover
-	{
+.runo .v-tabsheet-scrollerPrev:hover, .runo .v-tabsheet-scrollerNext:hover {
 	background-position: -24px 0px;
 }
 
-.runo .v-tabsheet-scrollerPrev-disabled,.runo .v-tabsheet-scrollerNext-disabled
-	{
+.runo .v-tabsheet-scrollerPrev-disabled, .runo .v-tabsheet-scrollerNext-disabled {
 	background-position: -12px 0px;
 }
 
-.runo .v-tabsheet-scrollerPrev-disabled:hover,.runo .v-tabsheet-scrollerNext-disabled:hover
-	{
+.runo .v-tabsheet-scrollerPrev-disabled:hover, .runo .v-tabsheet-scrollerNext-disabled:hover {
 	background-position: -12px 0px;
 }
 
@@ -5776,8 +6022,7 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-tabsheet-deco {
 	height: 10px;
-	background: transparent url(panel/img/bottom-right.png) repeat-x right
-		top;
+	background: transparent url(panel/img/bottom-right.png) repeat-x right top;
 	margin-left: 9px;
 	overflow: visible;
 }
@@ -5838,8 +6083,7 @@ body .runo.v-app .v-app-loading {
 .runo .v-tabsheet-tabs-light .v-tabsheet-tabitem .v-caption {
 	height: 24px;
 	padding: 8px 10px 0 11px;
-	background: transparent url(tabsheet/img/inline-tab-border.png)
-		no-repeat;
+	background: transparent url(tabsheet/img/inline-tab-border.png) no-repeat;
 }
 
 .runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-first .v-caption {
@@ -5847,15 +6091,13 @@ body .runo.v-app .v-app-loading {
 	background: transparent;
 }
 
-.runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-selected+.v-tabsheet-tabitemcell .v-caption,.runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-selected-first+.v-tabsheet-tabitemcell .v-caption
-	{
+.runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-selected + .v-tabsheet-tabitemcell .v-caption, .runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-selected-first + .v-tabsheet-tabitemcell .v-caption {
 	background: transparent;
 }
 
 .runo .v-tabsheet-tabs-light .v-tabsheet-tabitem-selected {
 	border: none;
-	background: transparent url(tabsheet/img/inline-tab-right.png) no-repeat
-		right top;
+	background: transparent url(tabsheet/img/inline-tab-right.png) no-repeat right top;
 	margin: 0;
 	padding: 0;
 	height: 32px;
@@ -5873,18 +6115,15 @@ body .runo.v-app .v-app-loading {
 }
 
 .runo .v-tabsheet-tabs-light .v-tabsheet-tabitem-selected .v-caption {
-	background: transparent url(tabsheet/img/inline-tab-left.png) no-repeat
-		-7px 0;
+	background: transparent url(tabsheet/img/inline-tab-left.png) no-repeat -7px 0;
 	margin: 0;
 	height: 23px;
 	padding: 9px 10px 0 11px;
 	overflow: visible;
 }
 
-.runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-first .v-tabsheet-tabitem-selected .v-caption
-	{
-	background: transparent url(tabsheet/img/inline-tab-left.png) no-repeat
-		-3px 0;
+.runo .v-tabsheet-tabs-light .v-tabsheet-tabitemcell-first .v-tabsheet-tabitem-selected .v-caption {
+	background: transparent url(tabsheet/img/inline-tab-left.png) no-repeat -3px 0;
 	padding-left: 16px;
 }
 
@@ -5911,14 +6150,12 @@ body .runo.v-app .v-app-loading {
 	display: none;
 }
 
-.runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerPrev,.runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerNext
-	{
+.runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerPrev, .runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerNext {
 	margin-top: 2px;
 	height: 34px;
 }
 
-.runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerPrev-disabled,.runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerNext-disabled
-	{
+.runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerPrev-disabled, .runo .v-tabsheet-tabcontainer-light .v-tabsheet-scrollerNext-disabled {
 	margin-top: 2px;
 	height: 34px;
 }
@@ -5927,7 +6164,7 @@ body .runo.v-app .v-app-loading {
 	height: 0;
 }
 
-.runo .v-textfield,.runo .v-textarea {
+.runo .v-textfield, .runo .v-textarea {
 	background: #fff url(textfield/img/bg.png) repeat-x;
 	border: 1px solid #b6b6b6;
 	border-top-color: #9d9d9d;
@@ -5937,8 +6174,7 @@ body .runo.v-app .v-app-loading {
 	line-height: 14px;
 }
 
-.runo input.v-textfield,.runo input[type=text].v-textfield,.runo textarea.v-textarea
-	{
+.runo input.v-textfield, .runo input[type=text].v-textfield, .runo textarea.v-textarea {
 	font-size: 12px;
 	height: 22px;
 	padding: 2px;
@@ -5948,11 +6184,11 @@ body .runo.v-app .v-app-loading {
 	height: auto;
 }
 
-.runo .v-textfield-focus,.runo .v-textarea-focus {
+.runo .v-textfield-focus, .runo .v-textarea-focus {
 	border-color: #5daee8;
 }
 
-.runo input.v-textfield-prompt,.runo textarea.v-textarea-prompt {
+.runo input.v-textfield-prompt, .runo textarea.v-textarea-prompt {
 	color: #999;
 	font-style: normal;
 }
@@ -5965,8 +6201,7 @@ body .runo.v-app .v-app-loading {
 	background: #fff url(textfield/img/bg.png) repeat-x;
 }
 
-.runo input.v-textfield-small,.runo input[type=text].v-textfield-small,.runo textarea.v-textarea-small
-	{
+.runo input.v-textfield-small, .runo input[type=text].v-textfield-small, .runo textarea.v-textarea-small {
 	font-size: 11px;
 	height: 18px;
 	line-height: 12px;
@@ -6027,13 +6262,11 @@ body .runo.v-app .v-app-loading {
 	border: 1px dotted black;
 }
 
-.runo .v-tree .v-tree-node-drag-top,.runo .v-tree .v-tree-node-drag-top.v-tree-node-expanded
-	{
+.runo .v-tree .v-tree-node-drag-top, .runo .v-tree .v-tree-node-drag-top.v-tree-node-expanded {
 	background-position: 2px 0;
 }
 
-.runo .v-tree-connectors .v-tree-node-drag-top,.runo .v-tree-connectors .v-tree-node-expanded.v-tree-node-drag-top
-	{
+.runo .v-tree-connectors .v-tree-node-drag-top, .runo .v-tree-connectors .v-tree-node-expanded.v-tree-node-drag-top {
 	background-position: 2px -53px;
 }
 
@@ -6043,12 +6276,10 @@ body .runo.v-app .v-app-loading {
 
 .runo .v-window {
 	color: #464f52;
-	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana,
-		sans-serif;
+	font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	background: transparent url(window/img/bottom-left.png) no-repeat left
-		bottom;
+	background: transparent url(window/img/bottom-left.png) no-repeat left bottom;
 }
 
 .runo .v-window-wrap {
@@ -6059,8 +6290,7 @@ body .runo.v-app .v-app-loading {
 	height: 49px;
 	margin-left: 9px;
 	padding: 15px 61px 11px 12px;
-	background: transparent url(window/img/top-right.png) no-repeat right
-		top;
+	background: transparent url(window/img/top-right.png) no-repeat right top;
 }
 
 .runo .v-window-header {
@@ -6072,7 +6302,7 @@ body .runo.v-app .v-app-loading {
 	text-shadow: 0 1px 0 #fff;
 }
 
-.runo .v-window-contents>div {
+.runo .v-window-contents > div {
 	background: #fff;
 	border: 2px solid #babfc0;
 	border-top: none;
@@ -6085,8 +6315,7 @@ body .runo.v-app .v-app-loading {
 .runo .v-window div.v-window-footer {
 	height: 8px;
 	margin-left: 9px;
-	background: transparent url(window/img/bottom-right.png) no-repeat right
-		bottom;
+	background: transparent url(window/img/bottom-right.png) no-repeat right bottom;
 	overflow: visible;
 }
 
@@ -6104,8 +6333,7 @@ body .runo.v-app .v-app-loading {
 	display: block;
 }
 
-.runo .v-window-closebox,.runo .v-window-maximizebox,.runo .v-window-restorebox
-	{
+.runo .v-window-closebox, .runo .v-window-maximizebox, .runo .v-window-restorebox {
 	position: absolute;
 	top: 21px;
 	height: 12px;
@@ -6122,7 +6350,7 @@ body .runo.v-app .v-app-loading {
 	background-position: 0 -12px;
 }
 
-.runo .v-window-maximizebox,.runo .v-window-restorebox {
+.runo .v-window-maximizebox, .runo .v-window-restorebox {
 	right: 42px;
 }
 
@@ -6157,8 +6385,7 @@ body .runo.v-app .v-app-loading {
 .runo .v-window-dialog .v-window-outerheader {
 	height: 32px;
 	padding: 13px 30px 5px 8px;
-	background: transparent url(window/img/top-right.png) no-repeat right
-		top;
+	background: transparent url(window/img/top-right.png) no-repeat right top;
 }
 
 .runo .v-window-dialog .v-window-header {
@@ -6169,7 +6396,7 @@ body .runo.v-app .v-app-loading {
 	text-shadow: 0 1px 0 #fff;
 }
 
-.runo .v-window-dialog .v-window-contents>div {
+.runo .v-window-dialog .v-window-contents > div {
 	background: #f1f3f3;
 }
 
@@ -6278,59 +6505,3 @@ body .runo.v-app .v-app-loading {
 	height: 39px;
 	background: transparent url(window/img/shadow/bottom-right.png);
 }
-
-/* New styles ..*/
-.logo {
-	margin-bottom: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-}
-
-.refreshlbl img {
-	width: 30px !important;
-	height: 30px !important;
-}
-
-.vfStyle {
-	border: 0px;
-	border-radius: 15px;
-	margin-top: 15px;
-	background: #f80000;
-	height: 40px;
-}
-
-.v-label-title1 {
-	color: white;
-	font-size: 20px !important;
-	text-align: center !important;
-	margin-top: 10px;
-}
-
-.v-table-row-odd {
-	background-color: rgb(255,221,221) !important;	
-}
-
-.runo .v-table tr.v-selected {
-	background: #57a7ed !important;
-}
-
-.runo .wizard .v-panel-nocaption,.runo .wizard .v-panel, .runo .wizard .v-panel-content, .runo .wizard .v-panel-deco, .runo .wizard .v-panel-deco:before{
-	border: none;
-	outline:none;
-	background: transparent;
-}
-
-.TopMargin
-{
-	margin-top: 2px !important;
-}
-/*
-.v-table-header {
-	background: #E1A71E;
-}
-
-.v-table-caption-container {
-	color: white !important;
-}
-background: transparent url(vf/rhombus-wide.png);*/

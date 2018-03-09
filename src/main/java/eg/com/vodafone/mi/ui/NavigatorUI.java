@@ -11,6 +11,9 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.shared.communication.PushMode;
 import com.vaadin.shared.ui.ui.Transport;
+import com.vaadin.spring.annotation.SpringUI;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
 
 import eg.com.vodafone.mi.connection.Environment;
@@ -23,6 +26,7 @@ import eg.com.vodafone.mi.view.MainView;
 import eg.com.vodafone.mi.view.ProductsView;
 import eg.com.vodafone.mi.view.wizard.ProductWizardView;
 
+@SpringUI
 @Theme("runo")
 @Title("Products Catalog")
 @SuppressWarnings("serial")
