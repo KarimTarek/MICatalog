@@ -9,10 +9,10 @@ import java.util.Map;
 import com.vaadin.server.StreamResource;
 import com.vaadin.server.StreamResource.StreamSource;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.Table;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.Runo;
+import com.vaadin.v7.ui.Label;
+import com.vaadin.v7.ui.Table;
+import com.vaadin.v7.ui.VerticalLayout;
+import com.vaadin.v7.ui.themes.Runo;
 
 import eg.com.vodafone.mi.sql.SQLStatement;
 

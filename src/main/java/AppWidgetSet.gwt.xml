@@ -27,5 +27,9 @@
 
     <inherits name="com.vaadin.DefaultWidgetSet" />
 
-    <inherits name="org.tepi.filtertable.gwt.FilterTableWidgetset" />
+    
+
+    <inherits name="com.vaadin.v7.Vaadin7WidgetSet" />
+
+    <inherits name="org.tepi.filtertable.WidgetSet" />
 </module>

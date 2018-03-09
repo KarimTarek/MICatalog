@@ -7,13 +7,13 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vaadin.data.Container.Filter;
-import com.vaadin.data.util.sqlcontainer.RowItem;
-import com.vaadin.data.util.sqlcontainer.query.FreeformStatementDelegate;
-import com.vaadin.data.util.sqlcontainer.query.OrderBy;
-import com.vaadin.data.util.sqlcontainer.query.generator.OracleGenerator;
-import com.vaadin.data.util.sqlcontainer.query.generator.StatementHelper;
-import com.vaadin.data.util.sqlcontainer.query.generator.filter.QueryBuilder;
+import com.vaadin.v7.data.Container.Filter;
+import com.vaadin.v7.data.util.sqlcontainer.RowItem;
+import com.vaadin.v7.data.util.sqlcontainer.query.FreeformStatementDelegate;
+import com.vaadin.v7.data.util.sqlcontainer.query.OrderBy;
+import com.vaadin.v7.data.util.sqlcontainer.query.generator.OracleGenerator;
+import com.vaadin.v7.data.util.sqlcontainer.query.generator.StatementHelper;
+import com.vaadin.v7.data.util.sqlcontainer.query.generator.filter.QueryBuilder;
 
 @SuppressWarnings("serial")
 public class FreeformQueryDelegate implements FreeformStatementDelegate

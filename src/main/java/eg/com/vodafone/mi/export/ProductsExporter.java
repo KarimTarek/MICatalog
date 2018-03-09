@@ -12,7 +12,7 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vaadin.data.util.sqlcontainer.connection.JDBCConnectionPool;
+import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
 import com.vaadin.server.VaadinService;
 
 import eg.com.vodafone.mi.sql.SQLStatement;

@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.vaadin.teemu.wizards.WizardStep;
 
-import com.vaadin.data.Validator.InvalidValueException;
+import com.vaadin.v7.data.Validator.InvalidValueException;
 import com.vaadin.server.DefaultErrorHandler;
 import com.vaadin.server.UserError;
 import com.vaadin.ui.AbstractComponent;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.Field;
+import com.vaadin.v7.ui.Field;
 
 import eg.com.vodafone.mi.domain.Product;
 

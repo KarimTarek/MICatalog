@@ -8,7 +8,7 @@ import java.sql.Statement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vaadin.data.util.sqlcontainer.connection.JDBCConnectionPool;
+import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
 
 public class JDBCTemplate
 {

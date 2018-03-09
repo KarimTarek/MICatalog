@@ -6,14 +6,14 @@ import java.util.List;
 
 import org.tepi.filtertable.FilterTable;
 
-import com.vaadin.data.util.sqlcontainer.SQLContainer;
-import com.vaadin.data.util.sqlcontainer.connection.JDBCConnectionPool;
-import com.vaadin.data.util.sqlcontainer.query.FreeformQuery;
+import com.vaadin.v7.data.util.sqlcontainer.SQLContainer;
+import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
+import com.vaadin.v7.data.util.sqlcontainer.query.FreeformQuery;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.Runo;
+import com.vaadin.v7.ui.VerticalLayout;
+import com.vaadin.v7.ui.themes.Runo;
 
 import eg.com.vodafone.mi.connection.ConnectionManager;
 import eg.com.vodafone.mi.tables.FreeformQueryDelegate;

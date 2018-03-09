@@ -1,10 +1,10 @@
 package eg.com.vodafone.mi.utility;
 
-import com.vaadin.data.Container;
+import com.vaadin.v7.data.Container;
 import com.vaadin.server.UserError;
 import com.vaadin.ui.AbstractComponent;
-import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.Field;
+import com.vaadin.v7.ui.ComboBox;
+import com.vaadin.v7.ui.Field;
 
 public class VaadinUtil
 {

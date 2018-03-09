@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.common.base.Strings;
-import com.vaadin.data.Container;
-import com.vaadin.data.Property.ValueChangeEvent;
-import com.vaadin.data.Property.ValueChangeListener;
-import com.vaadin.data.util.IndexedContainer;
-import com.vaadin.ui.ComboBox;
+import com.vaadin.v7.data.Container;
+import com.vaadin.v7.data.Property.ValueChangeEvent;
+import com.vaadin.v7.data.Property.ValueChangeListener;
+import com.vaadin.v7.data.util.IndexedContainer;
+import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.Field;
+import com.vaadin.v7.ui.Field;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.TextField;
+import com.vaadin.v7.ui.TextField;
 
 import eg.com.vodafone.mi.view.wizard.bean.StepBean;
 

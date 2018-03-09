@@ -1,6 +1,6 @@
 package eg.com.vodafone.mi.export;
 
-import com.vaadin.data.util.sqlcontainer.connection.JDBCConnectionPool;
+import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
 
 public class TableExporter
 {

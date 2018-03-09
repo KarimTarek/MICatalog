@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import com.vaadin.data.util.sqlcontainer.connection.J2EEConnectionPool;
-import com.vaadin.data.util.sqlcontainer.connection.JDBCConnectionPool;
+import com.vaadin.v7.data.util.sqlcontainer.connection.J2EEConnectionPool;
+import com.vaadin.v7.data.util.sqlcontainer.connection.JDBCConnectionPool;
 import com.vaadin.ui.UI;
 
 import eg.com.vodafone.mi.constants.ISessionConstants;

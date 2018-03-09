@@ -3,16 +3,16 @@ package eg.com.vodafone.mi.view.wizard;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.vaadin.data.Container;
-import com.vaadin.data.util.IndexedContainer;
+import com.vaadin.v7.data.Container;
+import com.vaadin.v7.data.util.IndexedContainer;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.ComboBox;
+import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.Runo;
+import com.vaadin.v7.ui.Label;
+import com.vaadin.v7.ui.TextField;
+import com.vaadin.v7.ui.VerticalLayout;
+import com.vaadin.v7.ui.themes.Runo;
 
 import eg.com.vodafone.mi.domain.Product;
 import eg.com.vodafone.mi.loader.CommonDataLoader;

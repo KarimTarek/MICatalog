@@ -2,11 +2,11 @@ package eg.com.vodafone.mi.view.product;
 
 import java.util.Map;
 
-import com.vaadin.shared.ui.label.ContentMode;
+import com.vaadin.v7.shared.ui.label.ContentMode;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.v7.ui.HorizontalLayout;
+import com.vaadin.v7.ui.Label;
+import com.vaadin.v7.ui.VerticalLayout;
 
 import eg.com.vodafone.mi.domain.StepConf;
 

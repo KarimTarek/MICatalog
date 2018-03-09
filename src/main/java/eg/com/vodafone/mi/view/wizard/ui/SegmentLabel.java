@@ -4,8 +4,8 @@ import com.google.common.base.Strings;
 import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 import com.vaadin.server.UserError;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.themes.Runo;
+import com.vaadin.v7.ui.Label;
+import com.vaadin.v7.ui.themes.Runo;
 
 @SuppressWarnings("serial")
 public class SegmentLabel extends AbstractComponent

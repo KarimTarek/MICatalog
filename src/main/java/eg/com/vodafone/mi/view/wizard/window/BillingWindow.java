@@ -8,29 +8,29 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.vaadin.data.Container;
-import com.vaadin.data.fieldgroup.BeanFieldGroup;
-import com.vaadin.data.util.BeanContainer;
-import com.vaadin.data.util.BeanItem;
-import com.vaadin.data.util.IndexedContainer;
-import com.vaadin.event.ItemClickEvent;
-import com.vaadin.event.ItemClickEvent.ItemClickListener;
+import com.vaadin.v7.data.Container;
+import com.vaadin.v7.data.fieldgroup.BeanFieldGroup;
+import com.vaadin.v7.data.util.BeanContainer;
+import com.vaadin.v7.data.util.BeanItem;
+import com.vaadin.v7.data.util.IndexedContainer;
+import com.vaadin.v7.event.ItemClickEvent;
+import com.vaadin.v7.event.ItemClickEvent.ItemClickListener;
 import com.vaadin.server.UserError;
-import com.vaadin.shared.ui.label.ContentMode;
+import com.vaadin.v7.shared.ui.label.ContentMode;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.ComboBox;
+import com.vaadin.v7.ui.ComboBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.Field;
+import com.vaadin.v7.ui.Field;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.Table;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.Runo;
+import com.vaadin.v7.ui.HorizontalLayout;
+import com.vaadin.v7.ui.Label;
+import com.vaadin.v7.ui.Table;
+import com.vaadin.v7.ui.TextField;
+import com.vaadin.v7.ui.VerticalLayout;
+import com.vaadin.v7.ui.themes.Runo;
 
 @SuppressWarnings("serial")
 public class BillingWindow extends AbstractWindow
@@ -295,7 +295,7 @@ public class BillingWindow extends AbstractWindow
 	binder.setBuffered(false);
 
 	form = new FormLayout();
-	form.setImmediate(true);
+//	form.setImmediate(true);
 
 	cmboServicesType = new ComboBox("Service Type: ");
 	cmboServicesType.setSizeFull();
