@@ -9,6 +9,7 @@ import com.vaadin.data.Container;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.Property.ValueChangeListener;
 import com.vaadin.data.util.IndexedContainer;
+import com.vaadin.event.ShortcutAction.KeyCode;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.FileDownloader;
@@ -107,6 +108,7 @@ public class ExportProductsView extends CustomComponent implements View
 	content.addComponent(form);
 
 	Button btnExport = new Button("Export");
+	btnExport.setClickShortcut(KeyCode.ENTER);
 	btnExport.addClickListener(new ClickListener()
 	{
 	    @Override
