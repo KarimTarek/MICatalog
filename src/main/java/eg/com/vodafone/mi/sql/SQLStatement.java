@@ -48,7 +48,7 @@ public class SQLStatement {
 				if (DateMatch) {
 					String DateWithoutZeros = value.trim().replace(" 00:00:00","");
 					String[] DateElements = DateWithoutZeros.split("-");
-					String FinalDateValue = "to_date('"+ DateElements[0] +'-'+ DateElements[1] +'-'+ DateElements[2]+"','DD-MON-RR')";
+					String FinalDateValue = "to_date('"+ DateElements[0] +'-'+ DateElements[1] +'-'+ DateElements[2]+" 00:00:00','YYYY-MM-DD HH24:MI:SS')";
 					builder.append(FinalDateValue);
 					builder.append(", ");
 				} else {
