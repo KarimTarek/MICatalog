@@ -162,11 +162,11 @@ public class ExportProductsView extends CustomComponent implements View
     private Container getEnvironments()
     {
 	List<String> envs = new ArrayList<String>();
-	envs.add(Environment.TEST_35.getText());
+	//envs.add(Environment.TEST_35.getText());
 	envs.add(Environment.TEST_65.getText());
-	envs.add(Environment.TEST_71.getText());
+	//envs.add(Environment.TEST_71.getText());
 	envs.add(Environment.PRD.getText());
-	envs.add(Environment.DEV.getText());
+	//envs.add(Environment.DEV.getText());
 	IndexedContainer container = new IndexedContainer((List<String>) envs);
 	return container;
     }

@@ -279,11 +279,11 @@ public class HomeLayout extends CustomComponent
 	// Environment ComboBox
 	HorizontalLayout horLayout = new HorizontalLayout();
 	ComboBox comboEnv = new ComboBox();
-	comboEnv.addItem(Environment.TEST_35.getText());
+	//comboEnv.addItem(Environment.TEST_35.getText());
 	comboEnv.addItem(Environment.TEST_65.getText());
-	comboEnv.addItem(Environment.TEST_71.getText());
+	//comboEnv.addItem(Environment.TEST_71.getText());
 	comboEnv.addItem(Environment.PRD.getText());
-	comboEnv.addItem(Environment.DEV.getText());
+	//comboEnv.addItem(Environment.DEV.getText());
 	comboEnv.setNewItemsAllowed(false);
 	comboEnv.setNullSelectionAllowed(false);
 	comboEnv.setFilteringMode(FilteringMode.STARTSWITH);
