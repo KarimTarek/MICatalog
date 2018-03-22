@@ -280,6 +280,7 @@ http://oss.sonatype.org/content/repositories/vaadin-snapshots/
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
+			 <encoding>UTF-8</encoding>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <outputDirectory>target</outputDirectory>
               		  <warName>ROOT</warName>
